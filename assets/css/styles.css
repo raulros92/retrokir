@@ -1,0 +1,68 @@
+/*==================== BASE ====================*/
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;;
+}
+
+/*==================== NAV ====================*/
+
+nav {
+  background-color: #121212;
+  color: white;
+  padding: 20px 50px;
+}
+
+.navSuperior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navLogo {
+  display: flex;
+  align-items: center;
+}
+
+.buscador {
+  display: flex;
+  align-items: center;
+  background-color: #c4c5c6;
+  padding: 15px 20px;
+  border-radius: 10px;
+}
+
+.logoRetrokir {
+height: 80px;
+width: 80px;
+}
+
+#logoTexto{
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-size: 32px;
+  margin: 0;
+}
+
+.buscadorTexto {
+  border: none;
+  background-color: transparent;
+}
+
+.buscadorTexto::placeholder {
+  color: white;
+}
+
+.ofertaLimitada{
+  font-size: 20px;
+  border-bottom: 2px solid #bd140a;
+  cursor: pointer;
+}
+
+
+
