@@ -1,3 +1,6 @@
+/*==================== Bulma ====================*/
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
+
 /*==================== BASE ====================*/
 
 body {
@@ -35,6 +38,7 @@ nav {
   background-color: #c4c5c6;
   padding: 15px 20px;
   border-radius: 10px;
+  margin-right: 100px;
 }
 
 .logoRetrokir {
@@ -62,6 +66,19 @@ width: 80px;
   font-size: 20px;
   border-bottom: 2px solid #bd140a;
   cursor: pointer;
+}
+
+.navInferior{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuObjeto{
+  margin-right: 50px;
+  cursor: pointer;
+  color:#c4c5c6;
+  font-weight: 400;
 }
 
 
