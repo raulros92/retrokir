@@ -1,5 +1,10 @@
 /*==================== Slider====================*/
 
 const slider = document.querySelector(".sliderContainer");
+const menuObjetos = document.querySelectorAll(".menuObjeto");
 
-slider.style.transform = "translateX(-200vw)";
+menuObjetos.forEach(function (objeto, index) {
+    objeto.addEventListener("click", function () {
+        slider.style.transform = `translateX(${-100 * index}vw)`;
+    });
+});
