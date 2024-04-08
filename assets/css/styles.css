@@ -7,6 +7,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Lato", sans-serif;
+  background-color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,7 +39,7 @@ nav {
   background-color: #c4c5c6;
   padding: 15px 20px;
   border-radius: 10px;
-  margin-right: 100px;
+  margin-right: 50px;
 }
 
 .logoRetrokir {
@@ -83,5 +84,48 @@ width: 80px;
 
 /*==================== Slider ====================*/
 
+.slider {
+  background: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  overflow: hidden;
+}
 
+.sliderContainer {
+  display: flex;
+  width: 500vw;
+}
 
+.sliderObject {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sliderTitulo {
+  margin-right: 10px;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  color:white;
+}
+
+.sliderPrecio {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+  color:white;
+  border: 1px solid gray
+}
+
+.botonCompra {
+  margin-right: 65px;
+  margin-bottom: 50px;
+}
