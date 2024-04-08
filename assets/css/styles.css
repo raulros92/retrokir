@@ -93,10 +93,12 @@ width: 80px;
 .sliderContainer {
   display: flex;
   width: 500vw;
+  transition: all 1.5s ease-in-out;
 }
 
 .sliderObject {
   width: 100vw;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,4 +130,8 @@ width: 80px;
 .botonCompra {
   margin-right: 65px;
   margin-bottom: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  width: 250px;
+  height: 60px;
 }
