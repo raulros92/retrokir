@@ -116,9 +116,20 @@ width: 80px;
   color:white;
 }
 
+.botonCompra {
+  position:absolute;
+  top: -10%;
+  margin-right: 65px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  width: 250px;
+  height: 60px;
+}
+
 .sliderPrecio {
   position: absolute;
-  top: 50%;
+  top: 40%;
   right: 10%;
   font-size: 60px;
   font-weight: 600;
@@ -127,13 +138,39 @@ width: 80px;
   border: 1px solid gray
 }
 
-.botonCompra {
-  margin-right: 65px;
-  margin-bottom: 50px;
-  font-size: 20px;
+.sliderImgEco {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+}
+
+.sliderEco {
+  position: absolute;
+  top: 60%;
+  right: 10%;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  color:white;
+  margin-right: -20px;
+}
+
+.sliderEco span {
+  color: #6AAF2E;
   font-weight: 600;
-  width: 250px;
-  height: 60px;
+}
+
+.kirbiGreen {
+  position: absolute;
+  top: 70%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin-right: -10px;
 }
 
 /*==================== Caracteristicas ====================*/
@@ -171,4 +208,78 @@ width: 80px;
 }
 
 /*==================== Producto ====================*/
+
+.producto {
+  background-color: whitesmoke;
+  position: relative;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+.productoImg {
+  width: 50%;
+  margin-top: 50px;
+}
+
+.productoDetalles {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 40%;
+  padding: 50px;
+}
+
+.productoTitulo {
+  font-size: 75px;
+  font-weight: 900;
+}
+
+.productoPrecio {
+  font-size: 30px;
+  color: black;
+}
+
+.productoDesc {
+  font-size: 16px;
+  color: gray;
+  padding: 20px;
+}
+
+.colores, .sizes{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.color {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: #010E21;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.color:last-child{
+  background-color: gray;
+}
+
+.size {
+  padding: 5px 10px;
+  border: 1px solid black;
+  margin-right: 10px;
+  font-size: 10px;
+}
+
+.botonProducto {
+  display: flex;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botonProducto:hover{
+  background-color: white;
+  color: black;
+}
 
