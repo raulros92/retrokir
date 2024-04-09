@@ -11,7 +11,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", sans-serif;;
+  font-family: "Roboto", sans-serif;
 }
 
 /*==================== NAV ====================*/
@@ -48,8 +48,8 @@ width: 80px;
 }
 
 #logoTexto{
-  font-family: "VT323", monospace;
-  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
   font-size: 32px;
   margin: 0;
 }
@@ -135,3 +135,40 @@ width: 80px;
   width: 250px;
   height: 60px;
 }
+
+/*==================== Caracteristicas ====================*/
+
+.caracteristicas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.caracteristica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.caracteristicaIcono {
+  width: 50px;
+  height: 50px;
+}
+
+.caracteristicaTitulo {
+  font-style: 20px;
+  font-weight: 600;
+  margin: 20px;
+  color: black;
+}
+
+.caracteristicaDesc {
+  color: gray;
+  width: 50%;
+  font-size: 14px;
+}
+
+/*==================== Producto ====================*/
+
