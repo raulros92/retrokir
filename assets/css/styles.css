@@ -276,6 +276,7 @@ width: 80px;
   color: white;
   font-weight: 600;
   cursor: pointer;
+  align-items: center;
 }
 
 .botonProducto:hover{
