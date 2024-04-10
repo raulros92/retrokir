@@ -2,6 +2,10 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
 
 /*==================== BASE ====================*/
+html {
+  scroll-behavior: smooth;
+  background-color: white;
+}
 
 body {
   padding: 0;
@@ -120,7 +124,7 @@ width: 80px;
   position:absolute;
   top: -10%;
   margin-right: 65px;
-  margin-bottom: 50px;
+  margin-bottom: 200px;
   font-size: 20px;
   font-weight: 600;
   width: 250px;
@@ -217,6 +221,7 @@ width: 80px;
 
 .productoImg {
   width: 50%;
+  height: auto;
   margin-top: 50px;
 }
 
@@ -233,9 +238,27 @@ width: 80px;
   font-weight: 900;
 }
 
+.precioYBoton {
+  display: flex;
+  align-items: center;
+}
+
 .productoPrecio {
   font-size: 30px;
-  color: black;
+  color: #6AAF2E;
+  
+}
+
+.botonProducto {
+  display: flex;
+  align-self: flex-end;
+  padding: 10px 20px;
+  margin: 10px ;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  align-items: center;
 }
 
 .productoDesc {
@@ -259,7 +282,7 @@ width: 80px;
 }
 
 .color:last-child{
-  background-color: gray;
+  background-color: #5C5C5C;
 }
 
 .size {
@@ -267,16 +290,7 @@ width: 80px;
   border: 1px solid black;
   margin-right: 10px;
   font-size: 10px;
-}
-
-.botonProducto {
-  display: flex;
-  padding: 10px 20px;
-  background-color: black;
-  color: white;
-  font-weight: 600;
   cursor: pointer;
-  align-items: center;
 }
 
 .botonProducto:hover{

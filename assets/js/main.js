@@ -4,41 +4,41 @@
 const productos = [
     {
         id: 1,
-        title: "marioBros",
-        price: "€19.95",
-        colors: [
+        titulo: "Mario Bros",
+        precio: "€19.95",
+        colores: [
             {
-                code: "invaderBlack",
+                code: "#010E21",
                 img: "assets/img/MarioBros.png",
             },
             {
-                code: "stormGrey",
+                code: "#5C5C5C",
                 img: "assets/img/MarioBrosStormGrey.png",
             },
         ],
     },
     {
         id: 2,
-        title: "sonicSega",
-        price: "€19.95",
-        colors: [
+        titulo: "Sonic Sega",
+        precio: "€19.95",
+        colores: [
             {
-                code: "cristalBlue",
+                code: "#B1D5ED",
                 img: "assets/img/SonicCristalBlue.png",
             },
             {
-                code: "white",
+                code: "#FFFFFF",
                 img: "assets/img/SonicWhite.png",
             },
         ],
     },
     {
         id: 3,
-        title: "solidSnake",
-        price: "€19.95",
-        colors: [
+        titulo: "Solid Snake",
+        precio: "€19.95",
+        colores: [
             {
-                code: "grey",
+                code: "#AFAAAE",
                 img: "assets/img/SolidSnake.png",
             },
             {
@@ -49,22 +49,22 @@ const productos = [
     },
     {
         id: 4,
-        title: "linkZelda",
-        price: "€19.95",
-        colors: [
+        titulo: "Link Zelda",
+        precio: "€19.95",
+        colores: [
             {
-                code: "blue",
+                code: "#3D6DB7",
                 img: "assets/img/LinkZelda.png",
             },
         ],
     },
     {
         id: 5,
-        title: "kirbyAdventure",
-        price: "€19.95",
-        colors: [
+        titulo: "Kirby",
+        precio: "€19.95",
+        colores: [
             {
-                code: "purple",
+                code: "#6B65A3",
                 img: "assets/img/KirbyAdventure.png",
             },
         ],
@@ -84,16 +84,42 @@ const productoPreciogActual = document.querySelector(".productoPrecio");
 const productoColoresActual = document.querySelectorAll(".color");
 const productoSizesActual = document.querySelectorAll(".size");
 
-menuObjetos.forEach(function (objeto, index) {
+menuObjetos.forEach(function (objeto, i) {
     objeto.addEventListener("click", function () {
         //cambiar la diapositiva actual
-        slider.style.transform = `translateX(${-100 * index}vw)`;
+        slider.style.transform = `translateX(${-100 * i}vw)`;
 
         //Cambiar el producto elegido
-        productoElegido = productos[index];
+        productoElegido = productos[i];
 
-        //Cambisr los textos del producto actual
-        productoTituloActual.textContent = productoElegido.title;
-        productoPreciogActual.textContent = productoElegido.price;
+        //Cambiar los datos del producto actual
+        productoTituloActual.textContent = productoElegido.titulo;
+        productoPreciogActual.textContent = productoElegido.precio;
+        productoImgActual.src = productoElegido.colores[0].img
+
+        //Asignamos colores al producto elegido
+        productoColoresActual.forEach((color, i) => {
+            if (i < productoElegido.colores.length) {
+                color.style.backgroundColor = productoElegido.colores[i].code;
+            } else color.style.display = "none";
+        })
     });
 });
+
+productoColoresActual.forEach(function (color, i) {
+    color.addEventListener("click", () => {
+        productoImgActual.src = productoElegido.colores[i].img;
+    })
+})
+
+productoSizesActual.forEach(function (size, i) {
+    size.addEventListener("click", function () {
+        productoSizesActual.forEach(function (size) {
+            size.style.backgroundColor = "white";
+            size.style.color = "black";
+        })
+        size.style.backgroundColor = "black";
+        size.style.color = "white";
+    })
+})
+
