@@ -5,7 +5,7 @@ const productos = [
     {
         id: 1,
         title: "marioBros",
-        price: 19.95,
+        price: "€19.95",
         colors: [
             {
                 code: "invaderBlack",
@@ -20,7 +20,7 @@ const productos = [
     {
         id: 2,
         title: "sonicSega",
-        price: "€19.9519.95,
+        price: "€19.95",
         colors: [
             {
                 code: "cristalBlue",
@@ -35,7 +35,7 @@ const productos = [
     {
         id: 3,
         title: "solidSnake",
-        price: 19.95,
+        price: "€19.95",
         colors: [
             {
                 code: "grey",
@@ -50,7 +50,7 @@ const productos = [
     {
         id: 4,
         title: "linkZelda",
-        price: 19.95,
+        price: "€19.95",
         colors: [
             {
                 code: "blue",
@@ -61,7 +61,7 @@ const productos = [
     {
         id: 5,
         title: "kirbyAdventure",
-        price: 19.95,
+        price: "€19.95",
         colors: [
             {
                 code: "purple",
