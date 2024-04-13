@@ -12,6 +12,7 @@
         rel="stylesheet">
     <!-- Link to icons -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <script src="https://kit.fontawesome.com/d1fc8a4f6d.js" crossorigin="anonymous"></script>
     <!-- Link to CSS styles -->
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -135,6 +136,7 @@
 
     <section class="producto" id="producto">
         <img src="assets/img/MarioBros.png" alt="Camiseta de Mario" class="productoImg">
+
         <div class="productoDetalles">
             <h1 class="productoTitulo">Mario Bros</h1>
             <div class="precioYBoton">
@@ -162,14 +164,38 @@
 
         <div class="pago">
             <h1 class="pagoTitulo">Información personal</h1>
-            <label>Nombre y apellido</label>
-            <input class="input is-focused" type="text" class="pagoInput">
-            <label>Numero de teléfono</label>
-            <input class="input is-focused" type="text" class="pagoInput">
+            <label>Nombre y apellidos</label>
+            <input type="text" class="pagoInput">
+            <label>Número de teléfono</label>
+            <input type="text" class="pagoInput">
             <label>Dirección</label>
-            <input class="input is-focused" type="text" class="pagoInput">
+            <input type="text" class="pagoInput">
+            <h1 class="pagoTitulo">Información de pago</h1>
+            <div class="tarjetaIconos">
+                <img src="assets/img/visa.png" width="40px" alt="Icono tarjeta" class="tarjetaIcono">
+                <img src="assets/img/master.png" width="40px" alt="Icono tarjeta" class="tarjetaIcono">
+            </div>
+            <input type="password" class="pagoInput" placeholder="Número de tarjeta">
+            <div class="tarjetaInfo">
+                <input type="text" placeholder="mes" class="pagoInput sm">
+                <input type="text" placeholder="año" class="pagoInput sm">
+                <input type="text" placeholder="cvv" class="pagoInput sm">
+            </div>
+            <button class="botonComprar">¡COMPRAR AHORA!</button>
+            <i class="cerrar fa-solid fa-xmark"></i>
         </div>
 
+    </section>
+
+    <section class="galeria">
+        <div class="galeriaObjeto">
+            <div class="GaleriaTituloBloque">
+                <i class="fa-solid fa-star"></i>
+                <h1 class="galeriaTitulo">¡Luce tu pasión por los videojuegos con Retrokir!</h1>
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+        <img src="assets/img/RetroKir.png" alt="Retrokir banner" class="galeriaImagen">
     </section>
 
 

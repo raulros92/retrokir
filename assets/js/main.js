@@ -123,3 +123,16 @@ productoSizesActual.forEach(function (size, i) {
     })
 })
 
+/*==================== Pago ====================*/
+
+const botonProducto = document.querySelector(".botonProducto");
+const pago = document.querySelector(".pago");
+const cerrar = document.querySelector(".cerrar");
+
+botonProducto.addEventListener("click", function () {
+    pago.style.display = "flex";
+})
+
+cerrar.addEventListener("click", () => {
+    pago.style.display = "none";
+})
