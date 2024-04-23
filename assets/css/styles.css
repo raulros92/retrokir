@@ -385,19 +385,19 @@ label {
   background-color: #010E21;
 }
 
-.galeriaObjeto {
+.bannerObjeto {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.galeriaTituloBloque {
+.bannerTituloBloque {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.galeriaTitulo {
+.bannerTitulo {
   display:inline-block;
   text-align: center;
   font-family: "VT323", monospace;

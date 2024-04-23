@@ -7,9 +7,7 @@
     <!-- Link to fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=VT323&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=VT323&display=swap" rel="stylesheet">
     <!-- Link to icons -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <script src="https://kit.fontawesome.com/d1fc8a4f6d.js" crossorigin="anonymous"></script>
@@ -184,20 +182,7 @@
             <button class="botonComprar">¡COMPRAR AHORA!</button>
             <i class="cerrar fa-solid fa-xmark"></i>
         </div>
-
     </section>
-
-    <section class="galeria">
-        <div class="galeriaObjeto">
-            <div class="GaleriaTituloBloque">
-                <i class="fa-solid fa-star"></i>
-                <h1 class="galeriaTitulo">¡Luce tu pasión por los videojuegos con Retrokir!</h1>
-                <i class="fa-solid fa-star"></i>
-            </div>
-        </div>
-        <img src="assets/img/RetroKir.png" alt="Retrokir banner" class="galeriaImagen">
-    </section>
-
 
     <script src="assets/js/main.js"></script>
 
