@@ -123,16 +123,32 @@ productoSizesActual.forEach(function (size, i) {
     })
 })
 
-/*==================== Pago ====================*/
+/*==================== Producto Seleccionado ====================*/
+
 
 const botonProducto = document.querySelector(".botonProducto");
-const pago = document.querySelector(".pago");
-const cerrar = document.querySelector(".cerrar");
+const productoSeleccionado = document.getElementById("productoSeleccionado");
+const botonContinuarComprando = document.getElementById("botonContinuarComprando");
+const realizarPago = document.getElementById("realizarPago");
 
 botonProducto.addEventListener("click", function () {
-    pago.style.display = "flex";
-})
+    productoSeleccionado.style.display = "block";
+});
 
-cerrar.addEventListener("click", () => {
-    pago.style.display = "none";
-})
+botonContinuarComprando.addEventListener("click", function () {
+    productoSeleccionado.style.display = "none";
+});
+
+/*==================== Pago ====================*/
+
+// const botonProducto = document.querySelector(".botonProducto");
+// const pago = document.querySelector(".pago");
+// const cerrar = document.querySelector(".cerrar");
+
+// botonProducto.addEventListener("click", function () {
+//     pago.style.display = "flex";
+// })
+
+// cerrar.addEventListener("click", () => {
+//     pago.style.display = "none";
+// })

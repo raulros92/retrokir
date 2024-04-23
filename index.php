@@ -166,6 +166,17 @@
         </div>
     </section>
 
+    <div class="productoSeleccionado" id="productoSeleccionado">
+        <div class="productoSeleccionadoContenido">
+            <div class="productoAgregado">
+                <img src="assets/img/Metakirbi aleta.png" alt="productoAgregado" class="productoAgregadoImagen">
+                <h1>¡Misión completada con éxito!</h1>
+            </div>
+            <button class="bottonContinuarComprando" id="botonContinuarComprando">Continuar Comprando</button>
+            <a href="pago.php" class="botonRealizarPago" id="realizarPago">Realizar pedido</a>
+        </div>
+    </div>
+
     <section id="formulario" class="section">
         <div class="container">
             <h3 class="title">¡Contacta con nosotros!</h3>
