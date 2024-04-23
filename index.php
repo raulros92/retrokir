@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link to fonts -->
+    <!-- Enlaces a fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=VT323&display=swap" rel="stylesheet">
-    <!-- Link to icons -->
+    <!-- Enlaces a iconos -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <script src="https://kit.fontawesome.com/d1fc8a4f6d.js" crossorigin="anonymous"></script>
-    <!-- Link to CSS styles -->
+    <!-- Enlaces a estilos CSS -->
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- Link to Bulma -->
+    <!-- Enlaces a Bulma -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <title>Retrokir</title>
 </head>
@@ -22,28 +22,33 @@
 <body>
 
     <nav id="nav">
-        <div class="navSuperior">
-            <div class="navObjeto" id="navLogo">
+        <div class="navLogo">
+            <div class="navObjeto" id="navLogoImg">
                 <img src="assets/img/Metakirbi aleta.png" alt="logo-retrokir" class="logoRetrokir">
-                <p id="logoTexto">RetroKir</p>
-            </div>
-            <div class="navObjeto">
-                <div class="buscador">
-                    <input type="text" placeholder="Buscar..." class="buscadorTexto">
-                    <i class="uil uil-search"></i>
-                </div>
-            </div>
-            <div class="navObjeto">
-                <span class="ofertaLimitada">Oferta limitada!</span>
+                <a id="logoLink" href="index.php">
+                    <p id="logoTexto">RetroKir</p>
+                </a>
             </div>
         </div>
-        <div class="navInferior">
-            <h3 class="menuObjeto">Mario Bros</h3>
-            <h3 class="menuObjeto">Sonic</h3>
-            <h3 class="menuObjeto">Solid Snake</h3>
-            <h3 class="menuObjeto">Link</h3>
-            <h3 class="menuObjeto">Kirby</h3>
+        <!-- Sección de contacto -->
+        <div class="Contactar">
+            <a href="https://www.tiktok.com/@retrokir" target="_blank" class="tiktokIcon"><i class="fab fa-tiktok"></i></a>
+            <a href="#formulario" class="contactanos">¡Contacta con nosotros!</a>
         </div>
+        <!-- Botones de navegación -->
+        <div class="navBotones">
+            <a href="vista/inicio_sesion.php" class="navBoton">Iniciar Sesión</a>
+            <a href="vista/registro.php" class="navBoton">Registro</a>
+            <a href="vista/cesta.php" class="navBoton"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </nav>
+
+    <nav class="navInferior">
+        <h3 class="menuObjeto">Mario Bros</h3>
+        <h3 class="menuObjeto">Sonic</h3>
+        <h3 class="menuObjeto">Solid Snake</h3>
+        <h3 class="menuObjeto">Link</h3>
+        <h3 class="menuObjeto">Kirby</h3>
     </nav>
 
     <section class="slider">
@@ -139,7 +144,7 @@
             <h1 class="productoTitulo">Mario Bros</h1>
             <div class="precioYBoton">
                 <h2 class="productoPrecio">€19.95</h2>
-                <button class="botonProducto is-responsive">¡COMPRAR AHORA!</button>
+                <button class="botonProducto is-responsive">Añadir a la cesta</button>
             </div>
             <p class="productoDesc">Esta camiseta, hecha al 100% de algodón orgánico de alta calidad, ofrece comodidad
                 excepcional y ajuste regular. Certificada por estándares ecológicos y éticos, es la elección ideal para
@@ -159,30 +164,39 @@
                 <div class="size">5XL</div>
             </div>
         </div>
+    </section>
 
-        <div class="pago">
-            <h1 class="pagoTitulo">Información personal</h1>
-            <label>Nombre y apellidos</label>
-            <input type="text" class="pagoInput">
-            <label>Número de teléfono</label>
-            <input type="text" class="pagoInput">
-            <label>Dirección</label>
-            <input type="text" class="pagoInput">
-            <h1 class="pagoTitulo">Información de pago</h1>
-            <div class="tarjetaIconos">
-                <img src="assets/img/visa.png" width="40px" alt="Icono tarjeta" class="tarjetaIcono">
-                <img src="assets/img/master.png" width="40px" alt="Icono tarjeta" class="tarjetaIcono">
-            </div>
-            <input type="password" class="pagoInput" placeholder="Número de tarjeta">
-            <div class="tarjetaInfo">
-                <input type="text" placeholder="mes" class="pagoInput sm">
-                <input type="text" placeholder="año" class="pagoInput sm">
-                <input type="text" placeholder="cvv" class="pagoInput sm">
-            </div>
-            <button class="botonComprar">¡COMPRAR AHORA!</button>
-            <i class="cerrar fa-solid fa-xmark"></i>
+    <section id="formulario" class="section">
+        <div class="container">
+            <h3 class="title">¡Contacta con nosotros!</h3>
+            <form action="index.php" method="POST">
+                <div class="field">
+                    <label class="label">Nombre:</label>
+                    <div class="control">
+                        <input class="input" type="text" name="nombre" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Email:</label>
+                    <div class="control">
+                        <input class="input" type="email" name="email" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Mensaje:</label>
+                    <div class="control">
+                        <textarea class="textarea" name="mensaje" required></textarea>
+                    </div>
+                </div>
+                <div class="field campoBoton">
+                    <div class="control">
+                        <button type="submit" class="button is-link">Enviar</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </section>
+
 
     <script src="assets/js/main.js"></script>
 

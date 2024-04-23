@@ -1,0 +1,47 @@
+<!-- <section class="galeria">
+        <div class="galeriaObjeto">
+            <div class="GaleriaTituloBloque">
+                <i class="fa-solid fa-star"></i>
+                <h1 class="galeriaTitulo">¡Luce tu pasión por los videojuegos con Retrokir!</h1>
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+        <img src="assets/img/RetroKir.png" alt="Retrokir banner" class="galeriaImagen">
+    </section> -->
+
+
+<!-- <section class="banner">
+        <div class="bannerObjeto">
+            <div class="bannerTituloBloque">
+                <i class="fa-solid fa-star"></i>
+                <h1 class="bannerTitulo">¡Luce tu pasión por los videojuegos con Retrokir!</h1>
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+        <img src="assets/img/RetroKir.png" alt="Retrokir banner" class="galeriaImagen">
+    </section> -->
+
+<!--         <div class="pago">
+            <h1 class="pagoTitulo">Información personal</h1>
+            <label>Nombre y apellidos</label>
+            <input type="text" class="pagoInput">
+            <label>Número de teléfono</label>
+            <input type="text" class="pagoInput">
+            <label>Dirección</label>
+            <input type="text" class="pagoInput">
+            <h1 class="pagoTitulo">Información de pago</h1>
+            <div class="tarjetaIconos">
+                <img src="assets/img/visa.png" width="40px" alt="Icono tarjeta" class="tarjetaIcono">
+                <img src="assets/img/master.png" width="40px" alt="Icono tarjeta" class="tarjetaIcono">
+            </div>
+            <input type="password" class="pagoInput" placeholder="Número de tarjeta">
+            <div class="tarjetaInfo">
+                <input type="text" placeholder="mes" class="pagoInput sm">
+                <input type="text" placeholder="año" class="pagoInput sm">
+                <input type="text" placeholder="cvv" class="pagoInput sm">
+            </div>
+            <button class="botonComprar">¡COMPRAR AHORA!</button>
+            <i class="cerrar fa-solid fa-xmark"></i>
+        </div>
+    </section> -->
+<!-- 
