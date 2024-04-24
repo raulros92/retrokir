@@ -32,7 +32,6 @@ body {
     padding: 10px;
   }
   
-  
   #registroUsuario form {
     display: flex;
     flex-direction: column;
@@ -54,9 +53,9 @@ body {
     color: white; 
   }
   
-  #registroUsuario button {
+  #botonRegistrar {
     padding: 10px 20px;
-    background-color: #6DB32F;
+    background-color: #bd140a;
     color: white;
     border: none;
     border-radius: 5px;
@@ -65,7 +64,7 @@ body {
     margin-bottom: 10px; 
   }
   
-  #registroUsuario button:hover {
+  #botonRegistrar:hover {
     background-color: #fbc40d;
   }
   
@@ -88,5 +87,15 @@ body {
   
   #volverInicio:hover {
     color: #fbc40d;
+  }
+
+  .mensajeExito {
+    color: white;
+    background-color: #2A7137;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 40px;
   }
   

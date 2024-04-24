@@ -1,3 +1,8 @@
+<?php
+// Incluir el controlador
+require_once('controlador/controlador.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -52,7 +52,6 @@ productoSizesActual.forEach(function (size, i) {
 
 /*==================== Producto Seleccionado ====================*/
 
-
 const botonProducto = document.querySelector(".botonProducto");
 const productoSeleccionado = document.getElementById("productoSeleccionado");
 const botonContinuarComprando = document.getElementById("botonContinuarComprando");
@@ -65,6 +64,7 @@ botonProducto.addEventListener("click", function () {
 botonContinuarComprando.addEventListener("click", function () {
     productoSeleccionado.style.display = "none";
 });
+
 
 /*==================== Pago ====================*/
 
