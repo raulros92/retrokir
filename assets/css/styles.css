@@ -1,7 +1,9 @@
 /*==================== Bulma ====================*/
+
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
 
 /*==================== BASE ====================*/
+
 html {
   scroll-behavior: smooth;
   background-color: white;
@@ -23,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 nav {
   background-color: #121212;
   color: white;
-  padding: 20px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,6 +63,7 @@ nav {
   margin-right: 20px;
   font-size: 20px;
   font-weight: bold;
+  padding: 0;
 }
 
 .contactanos:hover {
@@ -89,6 +92,10 @@ nav {
   text-decoration: none;
   margin-right: 20px;
   font-weight: bold;
+}
+
+.cesta {
+  font-size: 20px;
 }
 
 .navBoton:hover {
@@ -351,19 +358,20 @@ nav {
 /*==================== Formulario ====================*/
 
 #formulario {
-  background-color: #121212;
-  color: #5c5c5c;
+  background-color: #2A7137;
   padding: 20px;
 }
 
 #formulario h3 {
   margin-bottom: 20px;
   text-align: center;
+  color: white;
 }
 
 #formulario label {
   display: block;
   margin-bottom: 10px;
+  color: white;
 }
 
 #formulario input,
@@ -371,10 +379,10 @@ nav {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  background-color: #7585FF;
+  background-color: whitesmoke;
   border: none;
-  color: white;
-  font-size: bold;
+  color: #6DB32F;
+  font-size: 700;
 }
 
 .campoBoton {
@@ -394,11 +402,12 @@ nav {
 }
 
 #formulario button:hover {
-  background-color: #bd140a;
+  background-color: #6DB32F;
   color: white;
 }
 
 /*==================== Estilos para el productoSeleccionado ====================*/
+
 .productoSeleccionado {
   display: none;
   position: fixed;
@@ -462,7 +471,6 @@ nav {
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease; 
-
 }
 
 .bottonContinuarComprando:hover,

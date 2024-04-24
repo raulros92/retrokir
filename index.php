@@ -38,8 +38,8 @@
         <!-- Botones de navegación -->
         <div class="navBotones">
             <a href="vista/inicio_sesion.php" class="navBoton">Iniciar Sesión</a>
-            <a href="vista/registro.php" class="navBoton">Registro</a>
-            <a href="vista/cesta.php" class="navBoton"><i class="fas fa-shopping-cart"></i></a>
+            <a href="vista/registro.php" class="navBoton">Crear una cuenta</a>
+            <a href="vista/cesta.php" class="navBoton cesta"><i class="fas fa-shopping-cart"></i></a>
         </div>
     </nav>
 
@@ -208,7 +208,9 @@
         </div>
     </section>
 
-
+    <!-- Importar productos.js -->
+    <script src="assets/js/productos.js"></script>
+    <!-- Importar main.js -->
     <script src="assets/js/main.js"></script>
 
 </body>
