@@ -1,6 +1,14 @@
 <?php
 // Incluir el controlador
 require_once('controlador/controlador.php');
+
+// Verificar si se ha enviado una solicitud para cerrar sesión
+if (isset($_POST['cerrar_sesion'])) {
+    cerrarSesion();
+    header('Location: index.php');
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -42,8 +50,19 @@ require_once('controlador/controlador.php');
         </div>
         <!-- Botones de navegación -->
         <div class="navBotones">
-            <a href="vista/inicio_sesion.php" class="navBoton">Iniciar Sesión</a>
-            <a href="vista/registro.php" class="navBoton">Crear una cuenta</a>
+            <?php
+            // Verificar si el usuario ha iniciado sesión
+            if (isset($_SESSION['id_usuario'])) {
+                // Mostrar el botón "Cerrar Sesión"
+                echo '<form id="cerrarSesionForm" method="post">';
+                echo '<button type="submit" name="cerrar_sesion" class="navBoton">Cerrar Sesión</button>';
+                echo '</form>';
+            } else {
+                // Mostrar los botones "Crear una cuenta" e "Iniciar Sesión"
+                echo '<a href="#" id="iniciarSesion" class="navBoton">Iniciar Sesión</a>';
+                echo '<a href="vista/registro.php" class="navBoton">Crear una cuenta</a>';
+            }
+            ?>
             <a href="vista/cesta.php" class="navBoton cesta"><i class="fas fa-shopping-cart"></i></a>
         </div>
     </nav>
@@ -55,6 +74,25 @@ require_once('controlador/controlador.php');
         <h3 class="menuObjeto">Link</h3>
         <h3 class="menuObjeto">Kirby</h3>
     </nav>
+
+    <!-- Formulario de inicio de sesión -->
+    <div id="iniciarSesionForm" class="iniciarSesionForm">
+        <form id="inicioSesionForm" class="inicioSesionForm" method="post">
+            <div class="loginCampo">
+                <i class="cerrarInicioSesion fa-solid fa-xmark"></i>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="loginCampo">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Iniciar Sesión</button>
+            <div class="loginOp">
+                <a href="#" id="olvidasteContraseña">¿Olvidaste tu contraseña?</a>
+            </div>
+        </form>
+    </div>
 
     <section class="slider">
         <div class="sliderContainer">

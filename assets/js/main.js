@@ -65,6 +65,41 @@ botonContinuarComprando.addEventListener("click", function () {
     productoSeleccionado.style.display = "none";
 });
 
+/*==================== Iniciar sesión ====================*/
+
+const iniciarSesion = document.getElementById('iniciarSesion');
+const iniciarSesionForm = document.getElementById('iniciarSesionForm');
+const cerrarInicioSesion = document.querySelector('.cerrarInicioSesion');
+
+iniciarSesion.addEventListener('click', function () {
+    iniciarSesionForm.style.display = 'block';
+});
+
+cerrarInicioSesion.addEventListener('click', function () {
+    iniciarSesionForm.style.display = 'none';
+});
+
+/*==================== Cerrar sesión ====================*/
+
+const cerrarSesionBoton = document.querySelector('#cerrarSesionForm button');
+
+cerrarSesionBoton.addEventListener('click', function (event) {
+    event.preventDefault();
+    fetch('index.php', {
+        method: 'POST',
+        body: new FormData()
+    })
+        .then(response => {
+            if (response.redirected) {
+                window.location.href = response.url;
+            }
+        })
+        .catch(error => {
+            console.error('Error al cerrar sesión:', error);
+        });
+});
+
+
 
 /*==================== Pago ====================*/
 

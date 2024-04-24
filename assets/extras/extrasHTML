@@ -41,7 +41,7 @@
                 <input type="text" placeholder="cvv" class="pagoInput sm">
             </div>
             <button class="botonComprar">¡COMPRAR AHORA!</button>
-            <i class="cerrar fa-solid fa-xmark"></i>
+            <i class="cerrarPago fa-solid fa-xmark"></i>
         </div>
     </section> -->
 <!-- 

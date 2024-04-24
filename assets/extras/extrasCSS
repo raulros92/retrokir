@@ -69,7 +69,7 @@ label {
   background-color: #5cbf85;
 }
 
-.cerrar {
+.cerrarPago {
   width: 20px;
   height: 20px;
   position: absolute;
@@ -81,7 +81,7 @@ label {
   cursor: pointer;
 }
 
-.cerrar:hover {
+.cerrarPago:hover {
   background-color: #010E21;
 }
 
