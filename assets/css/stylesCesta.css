@@ -12,12 +12,14 @@ body {
 }
   
 #cesta {
+  position: relative;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   margin: 50px auto;
   max-width: 550px;
   background-color: #2A7137;
+  z-index: 1;
 }
 
 .cestaTitulo{
@@ -107,3 +109,183 @@ body {
 #volverInicio:hover {
   color: #fbc40d;
 }
+
+#volverInicioCentro {
+  position: fixed; /* Cambiamos a posición fija para que permanezca en su lugar mientras se desplaza la página */
+  bottom: 300px; /* Lo movemos hacia abajo */
+  left: 50%; /* Lo colocamos en el centro horizontalmente */
+  transform: translateX(-50%); /* Lo ajustamos horizontalmente */
+  z-index: 0; /* Lo ponemos detrás del formulario */
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 0;
+}
+
+#volverInicioCentro:hover {
+  color: #fbc40d;
+}
+
+/* ==================== Pago ==================== */
+
+.pago {
+  display: none;
+  width: 500px;
+  height: 500px; /* Aumenta la altura */
+  background-color: #2A7137;
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 50px;
+  flex-direction: column;
+  color: black;
+  -webkit-box-shadow: 0px 0px 30px -3px rgba(0,0,0,0.8); 
+  box-shadow: 0px 0px 30px -3px rgba(0,0,0,0.8);
+}
+
+.pagoTitulo {
+  font-size: 20px;
+  color: rgb(185, 185, 185);
+}
+
+label {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.pagoInput {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.tarjetaIconos {
+  display: flex;
+}
+
+.tarjetaIcono {
+  margin-right: 10px;
+}
+
+.tarjetaInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sm {
+  width: 30%;
+}
+
+.botonComprar {
+  position: absolute;
+  height: 40px;
+  bottom: -28px;
+  width: 100%;
+  left: 0;
+  -webkit-box-shadow: 0px 0px 30px -3px rgba(0,0,0,0.8); 
+  box-shadow: 0px 0px 30px -3px rgba(0,0,0,0.8);
+  color: white;
+  background-color: #369e60;
+  border: none;
+  cursor: pointer;
+}
+
+.botonComprar:hover {
+  background-color: #5cbf85;
+}
+
+.cerrarPago {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: #5c5c5c;
+  color: white;
+  text-align: center;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.cerrarPago:hover {
+  background-color: #010E21;
+}
+
+.bannerObjeto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bannerTituloBloque {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bannerTitulo {
+  display:inline-block;
+  text-align: center;
+  font-family: "VT323", monospace;
+  font-size: 32px;
+  color: black;
+}
+
+.fa-star {
+  color: #fbc40d;
+}
+
+/* ==================== Compra realizada con éxito ==================== */
+
+.compraExito {
+  display: none;
+  width: 500px;
+  height: 500px; /* Aumenta la altura */
+  background-color: #2A7137;
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 50px;
+  flex-direction: column;
+  color: black;
+  -webkit-box-shadow: 0px 0px 30px -3px rgba(0,0,0,0.8); 
+  box-shadow: 0px 0px 30px -3px rgba(0,0,0,0.8);
+}
+
+.compraExito h1 {
+  font-size: 32px; 
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.compraExito p {
+  font-family: "VT323", monospace;
+  font-size: 24px; 
+  margin-bottom: 20px;
+  color: #fbc40d;
+  text-align: center;
+}
+
+.compraExito img {
+  width: auto; 
+  height: auto;
+  margin-top: -50px;
+}
+
+#volverInicioFinal {
+  display: flex;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+

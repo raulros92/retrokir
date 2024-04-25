@@ -78,12 +78,14 @@ if (isset($_GET['cerrarSesion'])) {
         </div>
     </nav>
 
+    <?php
+    $menuItems = ['Mario Bros', 'Sonic', 'Solid Snake', 'Link', 'Kirby'];
+    ?>
+
     <nav class="navInferior">
-        <h3 class="menuObjeto">Mario Bros</h3>
-        <h3 class="menuObjeto">Sonic</h3>
-        <h3 class="menuObjeto">Solid Snake</h3>
-        <h3 class="menuObjeto">Link</h3>
-        <h3 class="menuObjeto">Kirby</h3>
+        <?php foreach ($menuItems as $item) : ?>
+            <h3 class="menuObjeto"><?= $item ?></h3>
+        <?php endforeach; ?>
     </nav>
 
     <!-- Formulario de inicio de sesión -->
@@ -283,6 +285,15 @@ if (isset($_GET['cerrarSesion'])) {
             </form>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>&copy; <?php echo date("Y"); ?> RetroKir. Todos los derechos reservados.</p>
+            <a href="https://www.tiktok.com/@retrokir" target="_blank" class="tiktokIcon">
+                <i class="fab fa-tiktok"></i> Síguenos en TikTok
+            </a>
+        </div>
+    </footer>
 
     <!-- Importar productos.js -->
     <script src="assets/js/productos.js"></script>

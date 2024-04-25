@@ -1,6 +1,7 @@
 /*==================== Cesta ====================*/
 
-// Obtener los elementos de los botones y los elementos li
+// Obtener los elementos de la cesta
+const cesta = document.getElementById('cesta');
 const basura1 = document.getElementById('basura1');
 const basura2 = document.getElementById('basura2');
 const vaciarCestaBtn = document.getElementById('vaciarCesta');
@@ -26,20 +27,29 @@ vaciarCestaBtn.addEventListener('click', function () {
 });
 
 comprarCestaBtn.addEventListener('click', function () {
-    console.log("Compra realizada");
+    cesta.style.display = "none";
 });
 
 
 /*==================== Pago ====================*/
 
-// const botonProducto = document.querySelector(".botonProducto");
-// const pago = document.querySelector(".pago");
-// const cerrar = document.querySelector(".cerrar");
+const pago = document.querySelector(".pago");
+const cerrarPago = document.querySelector(".cerrarPago");
 
-// botonProducto.addEventListener("click", function () {
-//     pago.style.display = "flex";
-// })
+comprarCestaBtn.addEventListener("click", function () {
+    pago.style.display = "flex";
+});
 
-// cerrar.addEventListener("click", () => {
-//     pago.style.display = "none";
-// })
+cerrarPago.addEventListener("click", () => {
+    pago.style.display = "none";
+});
+
+/*==================== Compra realizada con exito ====================*/
+
+const compraExito = document.querySelector(".compraExito");
+const botonComprar = document.querySelector(".botonComprar");
+
+botonComprar.addEventListener("click", function () {
+    compraExito.style.display = "flex";
+});
+

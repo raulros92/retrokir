@@ -17,6 +17,13 @@ require_once('../controlador/controlador.php');
 
 <body>
     <main>
+
+        <!-- Volver a la pagina de Inicio -->
+        <div class="volverInicioContainer">
+            <a href="../index.php" id="volverInicioCentro">Volver a la página de inicio</a>
+        </div>
+
+        <!-- Formulario para la cesta -->
         <section id="cesta">
             <div class="cestaTitulo">
                 <i class="fa-solid fa-star"></i>
@@ -61,6 +68,43 @@ require_once('../controlador/controlador.php');
             <div class="volverInicioContainer">
                 <a href="../index.php" id="volverInicio">Volver a la página de inicio</a>
             </div>
+        </section>
+
+        <!-- Formulario para el pago -->
+        <section>
+            <div class="pago">
+                <h1 class="pagoTitulo">Información personal</h1>
+                <label>Nombre y apellidos</label>
+                <input type="text" class="pagoInput">
+                <label>Número de teléfono</label>
+                <input type="text" class="pagoInput">
+                <label>Dirección</label>
+                <input type="text" class="pagoInput">
+                <h1 class="pagoTitulo">Información de pago</h1>
+                <div class="tarjetaIconos">
+                    <img src="../assets/img/visa.png" width="40px" alt="Icono tarjeta" class="tarjetaIcono">
+                    <img src="../assets/img/master.png" width="40px" alt="Icono tarjeta" class="tarjetaIcono">
+                </div>
+                <input type="password" class="pagoInput" placeholder="Número de tarjeta">
+                <div class="tarjetaInfo">
+                    <input type="text" placeholder="mes" class="pagoInput sm">
+                    <input type="text" placeholder="año" class="pagoInput sm">
+                    <input type="text" placeholder="cvv" class="pagoInput sm">
+                </div>
+                <button class="botonComprar">¡COMPRAR AHORA!</button>
+                <i class="cerrarPago fa-solid fa-xmark"></i>
+            </div>
+        </section>
+
+        <!-- Compra realizada con exito -->
+        <section>
+            <div class="compraExito">
+                <h1>¡Compra realizada con éxito!</h1>
+                <p>¡Gracias por confiar en RetroKir!</p>
+                <img src="../assets/img/Metakirbi aleta.png" alt="imagen del logo">
+                <div class="botonComprar">
+                    <a href="../index.php" id="volverInicioFinal">Volver a la página de inicio</a>
+                </div>
         </section>
 
     </main>

@@ -569,4 +569,27 @@ nav {
   font-size: 10px;
 }
 
+/*==================== Footer ====================*/
+
+.footer {
+  background-color: #121212;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  padding: 10px 0 !important;
+}
+
+.footer p {
+  margin-bottom: 5px;
+}
+
+.footer a {
+  color: #fbc40d;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #bd140a;
+}
+
 
