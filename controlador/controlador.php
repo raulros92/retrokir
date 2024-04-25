@@ -66,7 +66,7 @@ function eliminarDelCarrito($id_producto)
     }
 }
 
-// Función para vaciar el carrito
+// Función para obtener productos del carrito
 function vaciarCarrito()
 {
     unset($_SESSION['carrito']);

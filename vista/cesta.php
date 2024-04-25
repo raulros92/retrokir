@@ -23,8 +23,7 @@ require_once('../controlador/controlador.php');
                 <h2>Tu compra | Here we go!</h2>
                 <i class="fa-solid fa-star"></i>
             </div>
-            <ul>
-            </ul>
+            <!-- Incluir el codigo PHP para el carrito -->
         </section>
     </main>
 
