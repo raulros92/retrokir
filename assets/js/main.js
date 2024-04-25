@@ -79,28 +79,6 @@ cerrarInicioSesion.addEventListener('click', function () {
     iniciarSesionForm.style.display = 'none';
 });
 
-/*==================== Cerrar sesión ====================*/
-
-const cerrarSesionBoton = document.querySelector('#cerrarSesionForm button');
-
-cerrarSesionBoton.addEventListener('click', function (event) {
-    event.preventDefault();
-    fetch('index.php', {
-        method: 'POST',
-        body: new FormData()
-    })
-        .then(response => {
-            if (response.redirected) {
-                window.location.href = response.url;
-            }
-        })
-        .catch(error => {
-            console.error('Error al cerrar sesión:', error);
-        });
-});
-
-
-
 /*==================== Pago ====================*/
 
 // const botonProducto = document.querySelector(".botonProducto");

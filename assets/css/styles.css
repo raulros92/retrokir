@@ -90,8 +90,15 @@ nav {
 .navBoton {
   color: white;
   text-decoration: none;
-  margin-right: 20px;
+  margin: 20px;
   font-weight: bold;
+}
+
+.navBienvenido {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px;
 }
 
 .cesta {
@@ -550,6 +557,16 @@ nav {
 
 .cerrarInicioSesion:hover {
   color: #fbc40d;
+}
+
+#mensajeErrorSesion {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  font-size: 10px;
 }
 
 

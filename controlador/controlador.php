@@ -28,7 +28,7 @@ function iniciarSesion($email, $contrasena)
         $_SESSION['email'] = $email;
         return true;
     }
-    $_SESSION['mensaje_error'] = "Credenciales incorrectas. Por favor, inténtelo de nuevo.";
+    $_SESSION['mensaje_error'] = "Credenciales incorrectas. Inténtelo de nuevo.";
     return false;
 }
 
@@ -37,6 +37,9 @@ function cerrarSesion()
 {
     session_unset();
     session_destroy();
+    // Redirigir a la página de inicio
+    header('Location: index.php');
+    exit();
 }
 
 // Función para agregar un producto al carrito

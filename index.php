@@ -2,11 +2,19 @@
 // Incluir el controlador
 require_once('controlador/controlador.php');
 
+// Verificar si se ha enviado un formulario de inicio de sesión
+if (isset($_POST['submit_login'])) {
+    // Obtener los datos del formulario
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    // Llamar a la función iniciarSesion del controlador
+    iniciarSesion($email, $password);
+}
+
 // Verificar si se ha enviado una solicitud para cerrar sesión
-if (isset($_POST['cerrar_sesion'])) {
+if (isset($_GET['cerrarSesion'])) {
+    // Llamar a la función cerrarSesion del controlador
     cerrarSesion();
-    header('Location: index.php');
-    exit;
 }
 
 ?>
@@ -51,13 +59,16 @@ if (isset($_POST['cerrar_sesion'])) {
         <!-- Botones de navegación -->
         <div class="navBotones">
             <?php
-            // Verificar si el usuario ha iniciado sesión
-            if (isset($_SESSION['id_usuario'])) {
-                // Mostrar el botón "Cerrar Sesión"
-                echo '<form id="cerrarSesionForm" method="post">';
-                echo '<button type="submit" name="cerrar_sesion" class="navBoton">Cerrar Sesión</button>';
-                echo '</form>';
+            // Mostrar nombre de usuario y botón de cerrar sesión si hay una sesión iniciada
+            if (isset($_SESSION['email'])) {
+                echo "<p class='navBienvenido'>Bienvenido, " . $_SESSION['email'] . "</p>";
+                echo "<a href='index.php?cerrarSesion=true' class='navBoton'>Cerrar Sesión</a>";
             } else {
+                // Mostrar mensaje de error si las credenciales son incorrectas
+                if (isset($_SESSION['mensaje_error'])) {
+                    echo "<p>{$_SESSION['mensaje_error']}</p>";
+                    unset($_SESSION['mensaje_error']);
+                }
                 // Mostrar los botones "Crear una cuenta" e "Iniciar Sesión"
                 echo '<a href="#" id="iniciarSesion" class="navBoton">Iniciar Sesión</a>';
                 echo '<a href="vista/registro.php" class="navBoton">Crear una cuenta</a>';
@@ -87,7 +98,7 @@ if (isset($_POST['cerrar_sesion'])) {
                 <label for="password">Contraseña:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit">Iniciar Sesión</button>
+            <button type="submit" name="submit_login">Iniciar Sesión</button>
             <div class="loginOp">
                 <a href="#" id="olvidasteContraseña">¿Olvidaste tu contraseña?</a>
             </div>
@@ -187,7 +198,7 @@ if (isset($_POST['cerrar_sesion'])) {
             <h1 class="productoTitulo">Mario Bros</h1>
             <div class="precioYBoton">
                 <h2 class="productoPrecio">€19.95</h2>
-                <button class="botonProducto is-responsive">Añadir a la cesta</button>
+                <button class="botonProducto is-responsive" id="AnadirCesta">Añadir a la cesta</button>
             </div>
             <p class="productoDesc">Esta camiseta, hecha al 100% de algodón orgánico de alta calidad, ofrece comodidad
                 excepcional y ajuste regular. Certificada por estándares ecológicos y éticos, es la elección ideal para
@@ -216,7 +227,7 @@ if (isset($_POST['cerrar_sesion'])) {
                 <h1>¡Misión completada con éxito!</h1>
             </div>
             <button class="bottonContinuarComprando" id="botonContinuarComprando">Continuar Comprando</button>
-            <a href="pago.php" class="botonRealizarPago" id="realizarPago">Realizar pedido</a>
+            <a href="/vista/cesta.php" class="botonRealizarPago" id="realizarPago">Realizar pedido</a>
         </div>
     </div>
 

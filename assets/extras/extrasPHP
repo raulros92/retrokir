@@ -1,0 +1,20 @@
+                <?php
+                // Comprobar si el carrito está vacío
+                if (empty($_SESSION['carrito'])) {
+                    echo '<p class="cestaVacia">Tu cesta está vacía</p>';
+                } else {
+                    // Mostrar los productos en el carrito
+                    foreach ($_SESSION['carrito'] as $id_producto => $cantidad) {
+                        $producto = obtenerProducto($id_producto);
+                        echo '<li>';
+                        echo '<img src="../assets/img/' . $producto['imagen'] . '" alt="' . $producto['nombre'] . '">';
+                        echo '<div>';
+                        echo '<h3>' . $producto['nombre'] . '</h3>';
+                        echo '<p>' . $producto['precio'] . ' € x ' . $cantidad . ' unidades</p>';
+                        echo '<p>Total: ' . $producto['precio'] * $cantidad . ' €</p>';
+                        echo '<a href="../controlador/controlador.php?accion=eliminarDelCarrito&id_producto=' . $id_producto . '">Eliminar</a>';
+                        echo '</div>';
+                        echo '</li>';
+                    }
+                }
+                ?>
