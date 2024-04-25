@@ -52,12 +52,12 @@ productoSizesActual.forEach(function (size, i) {
 
 /*==================== Producto Seleccionado ====================*/
 
-const botonProducto = document.querySelector(".botonProducto");
+const AnadirCesta = document.querySelector("#AnadirCesta");
 const productoSeleccionado = document.getElementById("productoSeleccionado");
 const botonContinuarComprando = document.getElementById("botonContinuarComprando");
 const realizarPago = document.getElementById("realizarPago");
 
-botonProducto.addEventListener("click", function () {
+AnadirCesta.addEventListener("click", function () {
     productoSeleccionado.style.display = "block";
 });
 
@@ -78,17 +78,3 @@ iniciarSesion.addEventListener('click', function () {
 cerrarInicioSesion.addEventListener('click', function () {
     iniciarSesionForm.style.display = 'none';
 });
-
-/*==================== Pago ====================*/
-
-// const botonProducto = document.querySelector(".botonProducto");
-// const pago = document.querySelector(".pago");
-// const cerrar = document.querySelector(".cerrar");
-
-// botonProducto.addEventListener("click", function () {
-//     pago.style.display = "flex";
-// })
-
-// cerrar.addEventListener("click", () => {
-//     pago.style.display = "none";
-// })

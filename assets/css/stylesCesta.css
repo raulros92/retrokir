@@ -1,4 +1,4 @@
-/*==================== Registro ====================*/
+/*==================== Cesta ====================*/
 
 body {
   background-image: url('../img/retrokirRegistro.png');
@@ -11,59 +11,99 @@ body {
   padding: 0;
 }
   
-  #cesta {
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    margin: 50px auto;
-    max-width: 550px;
-    background-color: #2A7137;
-  }
+#cesta {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 50px auto;
+  max-width: 550px;
+  background-color: #2A7137;
+}
 
-  .cestaTitulo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.cestaTitulo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
   
-  #cesta h2 {
-    margin-bottom: 20px;
-    color: white;
-  }
+#cesta h2 {
+  margin-bottom: 20px;
+  color: white;
+}
 
-  .fa-star {
-    color: #fbc40d;
-    padding: 10px;
-  }
-  
-  #cesta ul {
-    display: flex;
-    flex-direction: column;
-  }
+.fa-star {
+  color: #fbc40d;
+  padding: 10px;
+}
 
-  .volverInicioContainer{
-    display: flex;
-    justify-content: center;
-  }
-  
-  #volverInicio {
-    display: inline-block;
-    margin-top: 20px;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  #volverInicio:hover {
-    color: #fbc40d;
-  }
+#cesta ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
 
-  .mensajeExito {
-    color: white;
-    background-color: #2A7137;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 20px;
-    padding-top: 40px;
-  }
+#cesta ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#cesta ul li:last-child {
+  border-bottom: none;
+}
+
+#cesta ul li img {
+  max-width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Estilos para los botones de la cesta */
+.cestaBotones {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.cestaBotones button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fbc40d;
+  color: #2A7137;
+  cursor: pointer;
+}
+
+.cestaBotones button:hover {
+  background-color: #ffe066;
+}
+
+.fa-trash {
+  cursor: pointer;
+}
+
+.fa-trash:hover {
+  background-color: #ffe066;
+}
+
+/* Estilos para el enlace de volver al inicio */
+
+.volverInicioContainer{
+  display: flex;
+  justify-content: center;
+}
+  
+#volverInicio {
+  display: inline-block;
+  margin-top: 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+  
+#volverInicio:hover {
+  color: #fbc40d;
+}

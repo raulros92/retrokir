@@ -63,6 +63,7 @@ if (isset($_GET['cerrarSesion'])) {
             if (isset($_SESSION['email'])) {
                 echo "<p class='navBienvenido'>Bienvenido, " . $_SESSION['email'] . "</p>";
                 echo "<a href='index.php?cerrarSesion=true' class='navBoton'>Cerrar Sesión</a>";
+                echo "<a href='vista/cesta.php' class='navBoton cesta'><i class='fas fa-shopping-cart'></i></a>";
             } else {
                 // Mostrar mensaje de error si las credenciales son incorrectas
                 if (isset($_SESSION['mensaje_error'])) {
@@ -74,7 +75,6 @@ if (isset($_GET['cerrarSesion'])) {
                 echo '<a href="vista/registro.php" class="navBoton">Crear una cuenta</a>';
             }
             ?>
-            <a href="vista/cesta.php" class="navBoton cesta"><i class="fas fa-shopping-cart"></i></a>
         </div>
     </nav>
 
@@ -220,16 +220,38 @@ if (isset($_GET['cerrarSesion'])) {
         </div>
     </section>
 
-    <div class="productoSeleccionado" id="productoSeleccionado">
-        <div class="productoSeleccionadoContenido">
-            <div class="productoAgregado">
-                <img src="assets/img/Metakirbi aleta.png" alt="productoAgregado" class="productoAgregadoImagen">
-                <h1>¡Misión completada con éxito!</h1>
+    <?php
+    // Verificar si hay una sesión iniciada
+    if (isset($_SESSION['email'])) {
+        // Mostrar la sección "productoSeleccionado" para usuarios con sesión iniciada
+    ?>
+        <div class="productoSeleccionado" id="productoSeleccionado">
+            <div class="productoSeleccionadoContenido">
+                <div class="productoAgregado">
+                    <img src="assets/img/Metakirbi aleta.png" alt="productoAgregado" class="productoAgregadoImagen">
+                    <h1>¡Misión completada con éxito!</h1>
+                </div>
+                <button class="bottonContinuarComprando" id="botonContinuarComprando">Continuar Comprando</button>
+                <a href="/vista/cesta.php" class="botonRealizarPago" id="realizarPago">Realizar pedido</a>
             </div>
-            <button class="bottonContinuarComprando" id="botonContinuarComprando">Continuar Comprando</button>
-            <a href="/vista/cesta.php" class="botonRealizarPago" id="realizarPago">Realizar pedido</a>
         </div>
-    </div>
+    <?php
+    } else {
+        // Mostrar la sección "productoSeleccionado" para usuarios sin sesión iniciada
+    ?>
+        <div class="productoSeleccionado" id="productoSeleccionado">
+            <div class="productoSeleccionadoContenido">
+                <div class="productoAgregado">
+                    <img src="assets/img/Metakirbi aleta.png" alt="productoAgregado" class="productoAgregadoImagen">
+                    <h1>Para poder comprar debes iniciar sesión antes :)</h1>
+                </div>
+                <button class="bottonContinuarComprando" id="botonContinuarComprando">Cerrar</button>
+                <a href="index.php" class="botonRealizarPago" id="realizarPago">Iniciar sesión</a>
+            </div>
+        </div>
+    <?php
+    }
+    ?>
 
     <section id="formulario" class="section">
         <div class="container">
