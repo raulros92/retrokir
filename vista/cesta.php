@@ -11,7 +11,7 @@ require_once('../controlador/controlador.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cesta</title>
-    <link rel="stylesheet" href="../assets/css/stylesRegistro.css">
+    <link rel="stylesheet" href="../assets/css/stylesCesta.css">
     <script src="https://kit.fontawesome.com/d1fc8a4f6d.js" crossorigin="anonymous"></script>
 </head>
 
