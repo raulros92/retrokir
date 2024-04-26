@@ -9,7 +9,6 @@ $productosReducir = [
 ];
 
 // Crear pedido y procesar la actualización de la cantidad de productos al hacer clic en el botón realizarPago
-
 if (isset($_GET["compra_con_exito"])) {
     $fecha_pedido = date("Y-m-d");
     $estado_pedido = "pendiente";
@@ -21,8 +20,7 @@ if (isset($_GET["compra_con_exito"])) {
             actualizarCantidadProducto($productoDB['id_producto'], $productoDB['cantidad'] - 1);
         }
     }
-};
-
+}
 ?>
 
 <!DOCTYPE html>
@@ -77,7 +75,7 @@ if (isset($_GET["compra_con_exito"])) {
                     </div>
                 </li>
                 <li>
-                    <h3>Total: 39.90€</h3>
+                    <h3 id="precioTotal">Total: 39.90€</h3>
                 </li>
             </ul>
             <div class="cestaBotones">
@@ -112,7 +110,7 @@ if (isset($_GET["compra_con_exito"])) {
                     <input type="text" placeholder="año" class="pagoInput sm">
                     <input type="text" placeholder="cvv" class="pagoInput sm">
                 </div>
-                <button class="botonComprar" name="realizarPago">¡COMPRAR AHORA!</button>
+                <button class="botonComprar" id="botonComprar" name="realizarPago">¡COMPRAR AHORA!</button>
                 <i class="cerrarPago fa-solid fa-xmark"></i>
             </div>
         </section>

@@ -2,7 +2,7 @@
 
 <?php
 
-require_once('../modelo/database.php');
+require_once(__DIR__ . '/../modelo/database.php');
 
 // Función para registrar un nuevo usuario
 function registrarUsuario($nombre, $email, $contrasena)

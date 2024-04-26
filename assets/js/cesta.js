@@ -6,6 +6,7 @@ const basura1 = document.getElementById('basura1');
 const basura2 = document.getElementById('basura2');
 const vaciarCestaBtn = document.getElementById('vaciarCesta');
 const comprarCestaBtn = document.getElementById('comprarCesta');
+const precioTotal = document.getElementById('precioTotal');
 const listaItems = document.querySelectorAll('ul li'); // Seleccionar todos los elementos li dentro de la lista
 
 // Función para eliminar el primer elemento al hacer clic en basura1
@@ -51,9 +52,15 @@ const botonComprar = document.querySelector(".botonComprar");
 
 botonComprar.addEventListener("click", function () {
     compraExito.style.display = "flex";
-});
 
-botonComprar.addEventListener("click", function () {
-    window.location.href = 'cesta.php?compra_con_exito=true';
+    // Realizar una solicitud AJAX para procesar las operaciones de SQL sin recargar la página
+    const xhr = new XMLHttpRequest(); // Crear un objeto XMLHttpRequest
+    xhr.open('GET', 'cesta.php?compra_con_exito=true', true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            console.log(xhr.responseText); // Verificar la respuesta del servidor en la consola
+        }
+    };
+    xhr.send();
 });
 

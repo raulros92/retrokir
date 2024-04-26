@@ -1,5 +1,6 @@
 <?php
 // Incluir el controlador
+session_start();
 require_once('controlador/controlador.php');
 
 // Verificar si se ha enviado un formulario de inicio de sesión
@@ -248,7 +249,7 @@ if (isset($_GET['cerrarSesion'])) {
                     <h1>Para poder comprar debes iniciar sesión antes :)</h1>
                 </div>
                 <button class="bottonContinuarComprando" id="botonContinuarComprando">Cerrar</button>
-                <a href="index.php" class="botonRealizarPago" id="realizarPago">Iniciar sesión</a>
+                <a href="#" class="botonRealizarPago" id="realizarPago">Iniciar sesión</a>
             </div>
         </div>
     <?php
