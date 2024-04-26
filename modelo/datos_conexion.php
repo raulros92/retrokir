@@ -1,7 +1,7 @@
 <!-- info de la base de datos -->
 <?php
-define("DATABASE", "retrokir");
-define("HOST", "localhost");
-define("USER", "root");
-define("PASSWORD", "");
+define("DATABASE", "retrokir"); // Nombre de la base de datos
+define("HOST", "localhost"); // Nombre del host
+define("USER", "root"); // Nombre del usuario
+define("PASSWORD", ""); // Contraseña
 ?>

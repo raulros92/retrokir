@@ -4,20 +4,20 @@ require_once('../controlador/controlador.php');
 
 // Definir los productos a actualizar
 $productosReducir = [
-    ['nombre' => 'Mario Bros', 'color' => 'Gris'],
-    ['nombre' => 'Sonic Sega', 'color' => 'Blanco']
+    ['nombre' => 'Mario Bros', 'color' => 'Gris'], // Producto 1
+    ['nombre' => 'Sonic Sega', 'color' => 'Blanco'] // Producto 2
 ];
 
 // Crear pedido y procesar la actualización de la cantidad de productos al hacer clic en el botón realizarPago
-if (isset($_GET["compra_con_exito"])) {
-    $fecha_pedido = date("Y-m-d");
-    $estado_pedido = "pendiente";
+if (isset($_GET["compra_con_exito"])) { // Si se ha realizado la compra con éxito
+    $fecha_pedido = date("Y-m-d"); // Obtener la fecha actual
+    $estado_pedido = "pendiente"; // Estado del pedido
     // Insertar el pedido en la base de datos
-    crearPedido($fecha_pedido, $estado_pedido);
-    foreach ($productosReducir as $producto) {
-        $productoDB = obtenerProductoPorNombreYColor($producto['nombre'], $producto['color']);
-        if ($productoDB && $productoDB['cantidad'] > 0) {
-            actualizarCantidadProducto($productoDB['id_producto'], $productoDB['cantidad'] - 1);
+    crearPedido($fecha_pedido, $estado_pedido); // Crear pedido
+    foreach ($productosReducir as $producto) { // Recorrer los productos a reducir
+        $productoDB = obtenerProductoPorNombreYColor($producto['nombre'], $producto['color']); // Obtener el producto de la base de datos
+        if ($productoDB && $productoDB['cantidad'] > 0) { // Si el producto existe y tiene cantidad disponible
+            actualizarCantidadProducto($productoDB['id_producto'], $productoDB['cantidad'] - 1); // Actualizar la cantidad del producto
         }
     }
 }
@@ -35,6 +35,7 @@ if (isset($_GET["compra_con_exito"])) {
 </head>
 
 <body>
+
     <main>
 
         <!-- Volver a la pagina de Inicio -->
@@ -49,9 +50,11 @@ if (isset($_GET["compra_con_exito"])) {
                 <h2>Tu compra | Here we go!</h2>
                 <i class="fa-solid fa-star"></i>
             </div>
-            <!-- Incluir el codigo PHP para el carrito -->
-            <!-- Aquí presento una prueba para visualizar como sería -->
+
+            <!-- Lista de productos en la cesta -->
             <ul>
+                <!-- Incluir el codigo PHP para el carrito -->
+                <!-- Aquí presento una prueba para visualizar como sería -->
                 <li class="liUno">
                     <img src="../assets/img/MarioBrosStormGrey.png" alt="Imagen de ropa">
                     <div>
@@ -78,6 +81,8 @@ if (isset($_GET["compra_con_exito"])) {
                     <h3 id="precioTotal">Total: 39.90€</h3>
                 </li>
             </ul>
+
+            <!-- Botones de la cesta -->
             <div class="cestaBotones">
                 <!-- Esto borraría todo el codigo PHP del carrito -->
                 <button id="vaciarCesta">Vaciar cesta</button>
@@ -87,6 +92,7 @@ if (isset($_GET["compra_con_exito"])) {
             <div class="volverInicioContainer">
                 <a href="../index.php" id="volverInicio">Volver a la página de inicio</a>
             </div>
+
         </section>
 
         <!-- Formulario para el pago -->

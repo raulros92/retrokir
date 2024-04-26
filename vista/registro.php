@@ -7,7 +7,7 @@ $mensaje_exito = "";
 
 // Verificar si el formulario de registro ha sido enviado
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["submit_registro"])) {
-    // Obtener los datos del formulario
+    // Obtener los datos del formulario: _POST es un array asociativo que almacena los datos enviados por el método POST
     $nombre = $_POST["nombre"];
     $email = $_POST["email"];
     $contrasena = $_POST["contrasena"];
@@ -36,7 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["submit_registro"])) {
 </head>
 
 <body>
+
     <main>
+
+        <!-- Sección de registro de usuario -->'
         <section id="registroUsuario">
             <div class="nuevoUsuarioTitulo">
                 <i class="fa-solid fa-star"></i>
@@ -55,9 +58,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["submit_registro"])) {
                     <a href="../index.php" id="volverInicio">Volver a la página de inicio</a>
                 </div>
             </form>
-            <div class="mensajeExito"><?php echo $mensaje_exito; ?></div>
+            <div class="mensajeExito"><?php echo $mensaje_exito; ?></div> <!-- Mostrar mensaje de éxito -->
 
         </section>
+
     </main>
 
 </body>

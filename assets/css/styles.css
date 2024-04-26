@@ -4,590 +4,589 @@
 
 /*==================== BASE ====================*/
 
-html {
-  scroll-behavior: smooth;
-  background-color: white;
+html { /* Estilos del html */
+  scroll-behavior: smooth; /* Animación al hacer scroll */
+  background-color: white; /* Color de fondo */
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Lato", sans-serif;
-  background-color: white;
+body { /* Estilos del body */
+  padding: 0; /* Eliminamos el padding por defecto */
+  margin: 0; /* Eliminamos el margin por defecto */
+  font-family: "Lato", sans-serif; /* Fuente por defecto */
+  background-color: white; /* Color de fondo */
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", sans-serif;
+h1, h2, h3, h4, h5, h6 { /* Estilos de los títulos */
+  font-family: "Roboto", sans-serif; /* Fuente por defecto */
 }
 
 /*==================== NAV ====================*/
 
-nav {
-  background-color: #121212;
-  color: white;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+nav { /* Estilos de la barra de navegación */
+  background-color: #121212; /* Color de fondo */
+  color: white; /* Color de texto */
+  padding: 0 20px; /* Padding */
+  display: flex; /* Flexbox */
+  justify-content: space-between; /* Justificar contenido */
+  align-items: center; /* Alinear elementos */
 }
 
-.navLogo {
-  display: flex;
-  align-items: center;
+.navLogo { /* Estilos del logo */
+  display: flex; /* Flexbox */
+  align-items: center; /* Alinear elementos */
 }
 
-#navLogoImg {
-  display: flex;
-  align-items: center;
+#navLogoImg { /* Estilos de la imagen del logo */
+  display: flex; /* Flexbox */
+  align-items: center; /* Alinear elementos */
 }
 
-.logoRetrokir {
-  height: 80px;
-  width: 80px;
+.logoRetrokir { /* Estilos del logo */
+  height: 80px; /* Altura */
+  width: 80px;  /* Ancho */
 }
 
-#logoTexto {
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 32px;
-  margin: 0;
-  cursor: pointer;
+#logoTexto { /* Estilos del texto del logo */
+  color: white; /* Color de texto */
+  font-family: "Roboto", sans-serif; /* Fuente */
+  font-weight: 600; /* Grosor de la fuente */
+  font-size: 32px; /* Tamaño de la fuente */
+  margin: 0; /* Margen */
+  cursor: pointer; /* Cursor */
 }
 
-#logoTexto:hover {
-  color: #bd140a;
+#logoTexto:hover { /* Efecto al pasar el ratón por encima */
+  color: #bd140a; /* Color de texto */
 }
 
-.contactanos {
-  margin-right: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 0;
+.contactanos { /* Estilos del enlace de contacto */
+  margin-right: 20px; /* Margen derecho */
+  font-size: 20px; /* Tamaño de la fuente */
+  font-weight: bold; /* Grosor de la fuente */
+  padding: 0; /* Padding */
 }
 
-.contactanos:hover {
-  color: white;
-  text-decoration: none;
+.contactanos:hover { /* Efecto al pasar el ratón por encima */
+  color: white; /* Color de texto */
+  text-decoration: none; /* Decoración de texto */
 }
 
-.tiktokIcon {
-  color: white;
-  text-decoration: none;
-  margin-right: 20px;
-  font-size: 30px;
+.tiktokIcon { /* Estilos del icono de TikTok */
+  color: white; /* Color de texto */
+  text-decoration: none; /* Decoración de texto */
+  margin-right: 20px; /* Margen derecho */
+  font-size: 30px; /* Tamaño de la fuente */
 }
 
-.tiktokIcon:hover {
-  color: #fbc40d;
+.tiktokIcon:hover { /* Efecto al pasar el ratón por encima */
+  color: #fbc40d; /* Color de texto */
 }
 
-.navBotones {
-  display: flex;
-  align-items: center;
+.navBotones { /* Estilos de los botones de navegación */
+  display: flex; /* Flexbox */
+  align-items: center; /* Alinear elementos */
 }
 
-.navBoton {
-  color: white;
-  text-decoration: none;
-  margin: 20px;
-  font-weight: bold;
+.navBoton {  /* Estilos de los botones de navegación */
+  color: white; /* Color de texto */
+  text-decoration: none; /* Decoración de texto */
+  margin: 20px; /* Margen */
+  font-weight: bold; /* Grosor de la fuente */
 }
 
-.navBienvenido {
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 20px;
+.navBienvenido { /* Estilos del mensaje de bienvenida */
+  color: white; /* Color de texto */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: bold; /* Grosor de la fuente */
+  margin: 20px; /* Margen */
 }
 
-.cesta {
-  font-size: 20px;
+.cesta { /* Estilos del icono de la cesta */
+  font-size: 20px; /* Tamaño de la fuente */
 }
 
-.navBoton:hover {
-  color: #fbc40d;
+.navBoton:hover { /* Efecto al pasar el ratón por encima */
+  color: #fbc40d; /* Color de texto */
 }
 
-.navBoton:last-child {
-  margin-right: 0;
+.navBoton:last-child { /* Estilos del último botón de navegación */
+  margin-right: 0;  /* Margen derecho */
 }
 
-.navInferior {
-  display: flex;
-  justify-content: center;
-  background-color: #5c5c5c;
-  border-bottom: 3px solid #fbc40d;
-  border-top: 3px solid #fbc40d;
+.navInferior { /* Estilos de la barra de navegación inferior */
+  display: flex; /* Flexbox */
+  justify-content: center; /* Justificar contenido */
+  background-color: #5c5c5c; /* Color de fondo */
+  border-bottom: 3px solid #fbc40d; /* Borde inferior */
+  border-top: 3px solid #fbc40d; /* Borde superior */
 }
 
-.menuObjeto {
-  font-family: vt323-regular;
-  font-size: 24px;
-  font-weight: bold; 
-  color: white;
-  padding: 0px 50px;
-  cursor: pointer;
+.menuObjeto { /* Estilos de los objetos del menú */
+  font-family: vt323-regular; /* Fuente */
+  font-size: 24px; /* Tamaño de la fuente */ 
+  font-weight: bold; /* Grosor de la fuente */
+  color: white; /* Color de texto */
+  padding: 0px 50px; /* Padding */
+  cursor: pointer; /* Cursor */
 }
 
-.menuObjeto:hover {
-  color: #00D1B2;
+.menuObjeto:hover { /* Efecto al pasar el ratón por encima */
+  color: #00D1B2; /* Color de texto */
 }
 
 /*==================== Slider ====================*/
 
-.slider {
-  background: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
-  overflow: hidden;
+.slider { /* Estilos del slider */
+  background: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"); /* Imagen de fondo */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); /* Clip-path */
+  overflow: hidden; /* Ocultar el overflow */
 }
 
-.sliderContainer {
-  display: flex;
-  width: 500vw;
-  transition: all 1.5s ease-in-out;
+.sliderContainer { /* Estilos del contenedor del slider */
+  display: flex; /* Flexbox */
+  width: 500vw; /* Ancho */
+  transition: all 1.5s ease-in-out; /* Transición */
 }
 
-.sliderObject {
-  width: 100vw;
-  flex-shrink: 0;
-  display: flex;
+.sliderObject { /* Estilos de los objetos del slider */
+  width: 100vw; /* Ancho */
+  flex-shrink: 0; /* No encoger */
+  display: flex; /* Flexbox */
   align-items: center;
-  justify-content: center;
-  position: relative;
+  justify-content: center; /* Justificar contenido */
+  position: relative; /* Posición */
 }
 
-.sliderTitulo {
-  margin-right: 10px;
-  position: absolute;
-  top: 10%;
-  right: 10%;
-  font-size: 60px;
-  font-weight: 900;
-  text-align: center;
-  color:white;
+.sliderTitulo { /* Estilos del título del slider */
+  margin-right: 10px; /* Margen derecho */
+  position: absolute; /* Posición */
+  top: 10%; /* Arriba */
+  right: 10%; /* Derecha */
+  font-size: 60px; /* Tamaño de la fuente */
+  font-weight: 900; /* Grosor de la fuente */
+  text-align: center; /* Alinear texto */
+  color:white; /* Color de texto */
 }
 
-.botonCompra {
-  position:absolute;
-  top: -10%;
-  margin-right: 65px;
-  margin-bottom: 200px;
-  font-size: 20px;
-  font-weight: 600;
-  width: 250px;
-  height: 60px;
+.botonCompra { /* Estilos del botón de compra */
+  position:absolute; /* Posición */
+  top: -10%; /* Arriba */
+  margin-right: 65px; /* Margen derecho */
+  margin-bottom: 200px; /* Margen inferior */
+  font-size: 20px; /* Tamaño de la fuente */
+  font-weight: 600; /* Grosor de la fuente */
+  width: 250px; /* Ancho */
+  height: 60px; /* Altura */
 }
 
-.sliderPrecio {
-  position: absolute;
-  top: 40%;
-  right: 10%;
-  font-size: 60px;
-  font-weight: 600;
-  text-align: center;
-  color:white;
+.sliderPrecio { /* Estilos del precio del slider */
+  position: absolute; /* Posición */
+  top: 40%; /* Arriba */
+  right: 10%; /* Derecha */
+  font-size: 60px; /* Tamaño de la fuente */
+  font-weight: 600; /* Grosor de la fuente */
+  text-align: center; /* Alinear texto */
+  color:white; /* Color de texto */
 }
 
-.sliderImgEco {
-  position: absolute;
-  top: 50%;
-  right: 10%;
-  width: 200px;
-  height: 100px;
-  text-align: center;
+.sliderImgEco { /* Estilos de la imagen eco del slider */
+  position: absolute; /* Posición */
+  top: 50%; /* Arriba */
+  right: 10%; /* Derecha */
+  width: 200px; /* Ancho */
+  height: 100px; /* Altura */
+  text-align: center; /* Alinear texto */
 }
 
-.sliderEco {
-  position: absolute;
-  top: 60%;
-  right: 10%;
-  font-size: 30px;
-  font-weight: 400;
-  text-align: center;
-  color:white;
-  margin-right: -20px;
+.sliderEco { /* Estilos del texto eco del slider */
+  position: absolute; /* Posición */
+  top: 60%; /* Arriba */
+  right: 10%; /* Derecha */ 
+  font-size: 30px; /* Tamaño de la fuente */
+  font-weight: 400; /* Grosor de la fuente */
+  text-align: center; /* Alinear texto */
+  color:white; /* Color de texto */
+  margin-right: -20px; /* Margen derecho */
 }
 
-.sliderEco span {
-  color: #6AAF2E;
-  font-weight: 600;
+.sliderEco span { /* Estilos del span eco del slider */
+  color: #6AAF2E; /* Color de texto */
+  font-weight: 600; /* Grosor de la fuente */
 }
 
-.kirbiGreen {
-  position: absolute;
-  top: 70%;
-  right: 10%;
-  width: 200px;
-  height: 200px;
-  text-align: center;
-  margin-right: -10px;
+.kirbiGreen { /* Estilos del kirbi verde */
+  position: absolute; /* Posición */
+  top: 70%; /* Arriba */
+  right: 10%; /* Derecha */
+  width: 200px; /* Ancho */
+  height: 200px; /* Altura */
+  text-align: center; /* Alinear texto */
+  margin-right: -10px; /* Margen derecho */
 }
 
 /*==================== Caracteristicas ====================*/
 
-.caracteristicas {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 50px;
+.caracteristicas { /* Estilos de las características */
+  display: flex; /* Flexbox */
+  align-items: center; /* Alinear elementos */
+  justify-content: space-between; /* Justificar contenido */
+  padding: 50px; /* Padding */
 }
 
-.caracteristica {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.caracteristica { /* Estilos de las características */
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Dirección de la columna */
+  align-items: center; /* Alinear elementos */
+  text-align: center; /* Alinear texto */
 }
 
-.caracteristicaIcono {
-  width: 50px;
-  height: 50px;
+.caracteristicaIcono { /* Estilos del icono de la característica */
+  width: 50px; /* Ancho */
+  height: 50px; /* Altura */
 }
 
-.caracteristicaTitulo {
-  font-style: 20px;
-  font-weight: 600;
-  margin: 20px;
-  color: black;
+.caracteristicaTitulo { /* Estilos del título de la característica */
+  font-style: 20px; /* Tamaño de la fuente */
+  font-weight: 600; /* Grosor de la fuente */
+  margin: 20px; /* Margen */
+  color: black; /* Color de texto */
 }
 
-.caracteristicaDesc {
-  color: gray;
-  width: 50%;
-  font-size: 14px;
-  font-weight: 500;
+.caracteristicaDesc { /* Estilos de la descripción de la característica */
+  color: gray; /* Color de texto */
+  width: 50%; /* Ancho */
+  font-size: 14px; /* Tamaño de la fuente */
+  font-weight: 500; /* Grosor de la fuente */
 }
 
 /*==================== Producto ====================*/
 
-.producto {
-  background-color: whitesmoke;
-  position: relative;
-  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+.producto { /* Estilos del producto */
+  background-color: whitesmoke; /* Color de fondo */
+  position: relative; /* Posición */
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); /* Clip-path */
 }
 
-.productoImg {
-  width: 50%;
-  height: auto;
-  margin-top: 50px;
+.productoImg { /* Estilos de la imagen del producto */
+  width: 50%; /* Ancho */
+  height: auto; /* Altura */
+  margin-top: 50px; /* Margen superior */
 }
 
-.productoDetalles {
-  position: absolute;
-  top: 10%;
-  right: 0;
-  width: 40%;
-  padding: 50px;
+.productoDetalles { /* Estilos de los detalles del producto */
+  position: absolute; /* Posición */
+  top: 10%; /* Arriba */
+  right: 0; /* Derecha */
+  width: 40%; /* Ancho */
+  padding: 50px; /* Padding */
 }
 
-.productoTitulo {
-  font-size: 75px;
-  font-weight: 900;
+.productoTitulo { /* Estilos del título del producto */
+  font-size: 75px; /* Tamaño de la fuente */
+  font-weight: 900; /* Grosor de la fuente */
 }
 
-.precioYBoton {
-  display: flex;
-  align-items: center;
+.precioYBoton { /* Estilos del precio y botón */
+  display: flex; /* Flexbox */
+  align-items: center; /* Alinear elementos */
 }
 
-.productoPrecio {
-  font-size: 40px;
-  color: #7585FF; 
-  font-weight: bold; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+.productoPrecio { /* Estilos del precio del producto */
+  font-size: 40px; /* Tamaño de la fuente */
+  color: #7585FF;  /* Color de texto */
+  font-weight: bold;  /* Grosor de la fuente */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra de texto */
 }
 
-.botonProducto {
-  display: flex;
-  align-self: flex-end;
-  padding: 10px 20px;
-  margin: 10px ;
-  background-color: black;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  align-items: center;
+.botonProducto { /* Estilos del botón del producto */
+  display: flex; /* Flexbox */
+  align-self: flex-end; /* Alinear al final */
+  padding: 10px 20px; /* Padding */
+  margin: 10px ; /* Margen */ 
+  background-color: black; /* Color de fondo */
+  color: white; /* Color de texto */
+  font-weight: 600; /* Grosor de la fuente */
+  cursor: pointer; /* Cursor */
+  align-items: center; /* Alinear elementos */
 }
 
-.productoDesc {
-  font-size: 16px;
-  color: #5c5c5c;
-  padding: 20px;
-  font-weight: 600;
+.productoDesc { /* Estilos de la descripción del producto */
+  font-size: 16px; /* Tamaño de la fuente */
+  color: #5c5c5c; /* Color de texto */
+  padding: 20px; /* Padding */
+  font-weight: 600; /* Grosor de la fuente */
 }
 
-.colores, .sizes{
-  display: flex;
-  margin-bottom: 20px;
+.colores, .sizes { /* Estilos de los colores y tallas */
+  display: flex; /* Flexbox */
+  margin-bottom: 20px; /* Margen inferior */
 }
 
-.color {
-  width: 32px;
-  height: 32px;
-  border-radius: 5px;
-  background-color: #010E21;
-  margin-right: 10px;
-  cursor: pointer;
+.color { /* Estilos del color */
+  width: 32px; /* Ancho */
+  height: 32px; /* Altura */
+  border-radius: 5px; /* Radio del borde */
+  background-color: #010E21; /* Color de fondo */
+  margin-right: 10px; /* Margen derecho */
+  cursor: pointer; /* Cursor */
 }
 
-.color:last-child{
-  background-color: #5C5C5C;
+.color:last-child { /* Estilos del último color */
+  background-color: #5C5C5C; /* Color de fondo */
 }
 
-.size {
-  padding: 5px 10px;
-  border: 1px solid black;
-  margin-right: 10px;
-  font-size: 10px;
-  cursor: pointer;
-  font-weight: 700;
+.size { /* Estilos de la talla */
+  padding: 5px 10px; /* Padding */
+  border: 1px solid black; /* Borde */
+  margin-right: 10px; /* Margen derecho */
+  font-size: 10px; /* Tamaño de la fuente */
+  cursor: pointer; /* Cursor */
+  font-weight: 700; /* Grosor de la fuente */
 }
 
-.botonProducto {
-  padding: 10px 20px;
-  margin-top: 10px;
-  background-color: #bd140a;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 700;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  }
+.botonProducto { /* Estilos del botón del producto */
+  padding: 10px 20px; /* Padding */
+  margin-top: 10px; /* Margen superior */
+  background-color: #bd140a; /* Color de fondo */
+  color: white; /* Color de texto */
+  border: none; /* Borde */
+  cursor: pointer; /* Cursor */
+  font-size: 16px; /* Tamaño de la fuente */
+  font-weight: 700; /* Grosor de la fuente */
+  border-radius: 5px; /* Radio del borde */
+  transition: background-color 0.3s ease; /* Transición */
+}
   
-  .botonProducto:hover {
-  background-color: #fbc40d;
-  color: black;
+  .botonProducto:hover { /* Efecto al pasar el ratón por encima */
+  background-color: #fbc40d; /* Color de fondo */
+  color: black; /* Color de texto */
   }
 
 /*==================== Formulario ====================*/
 
-#formulario {
-  background-color: #2A7137;
-  padding: 20px;
+#formulario { /* Estilos del formulario */
+  background-color: #2A7137; /* Color de fondo */
+  padding: 20px; /* Padding */
 }
 
-#formulario h3 {
-  margin-bottom: 20px;
-  text-align: center;
-  color: white;
+#formulario h3 { /* Estilos del título del formulario */
+  margin-bottom: 20px; /* Margen inferior */
+  text-align: center; /* Alinear texto */
+  color: white; /* Color de texto */
 }
 
-#formulario label {
-  display: block;
-  margin-bottom: 10px;
-  color: white;
+#formulario label { /* Estilos de la etiqueta del formulario */
+  display: block; /* Bloque */
+  margin-bottom: 10px; /* Margen inferior */
+  color: white; /* Color de texto */
 }
 
-#formulario input,
-#formulario textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  background-color: whitesmoke;
-  border: none;
-  color: #6DB32F;
-  font-size: 700;
+#formulario input, 
+#formulario textarea { /* Estilos del input y textarea del formulario */
+  width: 100%; /* Ancho */
+  padding: 10px; /* Padding */
+  margin-bottom: 20px; /* Margen inferior */
+  background-color: whitesmoke; /* Color de fondo */
+  border: none; /* Borde */
+  color: #6DB32F; /* Color de texto */
+  font-size: 700; /* Grosor de la fuente */
 }
 
-.campoBoton {
-  display: flex;
-  justify-content: center;
+.campoBoton { /* Estilos del campo del botón */
+  display: flex; /* Flexbox */
+  justify-content: center; /* Justificar contenido */
 }
 
-#formulario button {
-  padding: 10px 20px;
-  background-color: #fbc40d;;
-  color: black;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-  
+#formulario button { /* Estilos del botón del formulario */
+  padding: 10px 20px; /* Padding */
+  background-color: #fbc40d; /* Color de fondo */
+  color: black; /* Color de texto */
+  border: none; /* Borde */
+  cursor: pointer; /* Cursor */
+  font-size: 16px; /* Tamaño de la fuente */
+  transition: background-color 0.3s ease; /* Transición */
 }
 
-#formulario button:hover {
-  background-color: #6DB32F;
-  color: white;
+#formulario button:hover { /* Efecto al pasar el ratón por encima */
+  background-color: #6DB32F; /* Color de fondo */
+  color: white; /* Color de texto */
 }
 
 /*==================== Estilos para el productoSeleccionado ====================*/
 
-.productoSeleccionado {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 60%;
-  max-width: 400px; 
-  background-color: #6EB12E; 
-  padding: 40px; 
-  border-radius: 20px; 
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); 
-  text-align: center;
+.productoSeleccionado { /* Estilos del producto seleccionado */
+  display: none; /* Ocultar */
+  position: fixed; /* Posición */
+  top: 50%; /* Arriba */
+  left: 50%; /* Izquierda */
+  transform: translate(-50%, -50%); /* Transformar */
+  z-index: 2; /* Índice z */
+  width: 60%; /* Ancho */
+  max-width: 400px; /* Ancho máximo */
+  background-color: #6EB12E; /* Color de fondo */
+  padding: 40px; /* Padding */
+  border-radius: 20px; /* Radio del borde */ 
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Sombra */ 
+  text-align: center; /* Alinear texto */
 }
 
-.productoAgregado {
-  margin-bottom: 20px; 
+.productoAgregado { /* Estilos del producto agregado */
+  margin-bottom: 20px; /* Margen inferior */
 }
 
-.productoAgregadoImagen {
-  width: 150px; 
-  margin: 0 auto;
-  display: block;
+.productoAgregadoImagen { /* Estilos de la imagen del producto agregado */
+  width: 150px; /* Ancho */ 
+  margin: 0 auto; /* Margen */
+  display: block; /* Bloque */ 
 }
 
-.productoSeleccionadoContenido {
-  position: relative;
+.productoSeleccionadoContenido { /* Estilos del contenido del producto seleccionado */
+  position: relative; /* Posición */
 }
 
-.productoSeleccionado h1 {
-  font-family: "VT323", monospace;
-  font-weight: 700;
-  font-size: 40px;
-  margin-bottom: 30px;
-  color: #333;
+.productoSeleccionado h1 { /* Estilos del título del producto seleccionado */
+  font-family: "VT323", monospace; /* Fuente */
+  font-weight: 700; /* Grosor de la fuente */
+  font-size: 40px; /* Tamaño de la fuente */
+  margin-bottom: 30px; /* Margen inferior */
+  color: #333; /* Color de texto */
 }
 
-
-.bottonContinuarComprando {
-  display: inline-block;
-  padding: 15px 30px; 
-  margin: 10px; 
-  background-color: #fbc40d;
-  color: black;
-  border: none;
-  border-radius: 30px; 
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease; 
+.bottonContinuarComprando { /* Estilos del botón de continuar comprando */
+  display: inline-block; /* Bloque en línea */
+  padding: 15px 30px; /* Padding */ 
+  margin: 10px; /* Margen */
+  background-color: #fbc40d; /* Color de fondo */
+  color: black; /* Color de texto */
+  border: none; /* Borde */
+  border-radius: 30px; /* Radio del borde */
+  text-decoration: none; /* Decoración de texto */
+  cursor: pointer; /* Cursor */
+  transition: background-color 0.3s ease; /* Transición */ 
 }
 
-.botonRealizarPago {
-  display: inline-block;
-  padding: 15px 30px; 
-  margin: 10px; 
-  background-color: #bd140a;
-  color: white;
-  border: none;
-  border-radius: 30px; 
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease; 
+.botonRealizarPago { /* Estilos del botón de realizar pago */
+  display: inline-block; /* Bloque en línea */
+  padding: 15px 30px; /* Padding */
+  margin: 10px; /* Margen */
+  background-color: #bd140a; /* Color de fondo */
+  color: white; /* Color de texto */
+  border: none; /* Borde */
+  border-radius: 30px; /* Radio del borde */
+  text-decoration: none; /* Decoración de texto */
+  cursor: pointer; /* Cursor */
+  transition: background-color 0.3s ease; /* Transición */ 
 }
 
 .bottonContinuarComprando:hover,
-.botonRealizarPago:hover  {
-  transform: scale(1.1);
-  border-color: #bd140a;
+.botonRealizarPago:hover { /* Efecto al pasar el ratón por encima */
+  transform: scale(1.1); /* Escalar */
+  border-color: #bd140a; /* Color del borde */
 }
 
 /*==================== Iniciar sesión ====================*/
 
-#iniciarSesionForm {
-  display: none;
-  position: fixed;
-  top: 35%;
-  left: 85%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  z-index: 2;
-  text-align: center;
-  width: 300px;
-  margin: 0 auto;
+#iniciarSesionForm { /* Estilos del formulario de inicio de sesión */
+  display: none; /* Ocultar */
+  position: fixed; /* Posición */
+  top: 35%; /* Arriba */
+  left: 85%; /* Izquierda */
+  transform: translate(-50%, -50%); /* Transformar */
+  background-color: #fff; /* Color de fondo */
+  padding: 20px; /* Padding */
+  border: 1px solid #ddd; /* Borde */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  z-index: 2; /* Índice z */
+  text-align: center; /* Alinear texto */
+  width: 300px; /* Ancho */
+  margin: 0 auto; /* Margen */
 }
 
-.iniciarSesionForm .loginCampo {
-  margin-bottom: 20px;
+.iniciarSesionForm .loginCampo { /* Estilos del campo de inicio de sesión */
+  margin-bottom: 20px; /* Margen inferior */
 }
 
-.iniciarSesionForm label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  font-size:14px;
-  color: #5C5C5C;
+.iniciarSesionForm label { /* Estilos de la etiqueta de inicio de sesión */
+  display: block; /* Bloque */
+  margin-bottom: 5px; /* Margen inferior */
+  font-weight: bold; /* Grosor de la fuente */
+  font-size:14px; /* Tamaño de la fuente */
+  color: #5C5C5C; /* Color de texto */
 } 
 
 .iniciarSesionForm input[type="email"],
-.iniciarSesionForm input[type="password"] {
-  width: calc(100% - 10px);
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+.iniciarSesionForm input[type="password"] { /* Estilos del input de inicio de sesión */
+  width: calc(100% - 10px); /* Ancho */
+  padding: 8px; /* Padding */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 3px; /* Radio del borde */
 }
 
-.iniciarSesionForm .loginOp a {
-  display: inline-block;
-  margin-right: 10px;
-  color: #007bff;
-  text-decoration: none;
-  font-size: 12px;
+.iniciarSesionForm .loginOp a { /* Estilos del enlace de inicio de sesión */
+  display: inline-block; /* Bloque en línea */
+  margin-right: 10px; /* Margen derecho */
+  color: #007bff; /* Color de texto */
+  text-decoration: none; /* Decoración de texto */
+  font-size: 12px; /* Tamaño de la fuente */
 }
 
-.iniciarSesionForm button[type="submit"] {
-  padding: 8px 15px;
-  background-color: #bd140a; 
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 10px;
+.iniciarSesionForm button[type="submit"] { /* Estilos del botón de inicio de sesión */
+  padding: 8px 15px; /* Padding */
+  background-color: #bd140a; /* Color de fondo */ 
+  color: #fff; /* Color de texto */
+  border: none; /* Borde */
+  border-radius: 5px; /* Radio del borde */
+  cursor: pointer; /* Cursor */
+  margin: 10px; /* Margen */
+  padding: auto; /* Padding */
 }
 
-.iniciarSesionForm button[type="submit"]:hover {
-  background-color: #fbc40d;
+.iniciarSesionForm button[type="submit"]:hover { /* Efecto al pasar el ratón por encima */
+  background-color: #fbc40d; /* Color de fondo */
 }
 
-.cerrarInicioSesion {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  color: #333;
+.cerrarInicioSesion { /* Estilos del botón de cerrar inicio de sesión */
+  position: absolute; /* Posición */
+  top: 10px; /* Arriba */
+  right: 10px; /* Derecha */
+  cursor: pointer; /* Cursor */
+  font-size: 18px; /* Tamaño de la fuente */
+  color: #333; /* Color de texto */
 }
 
-.cerrarInicioSesion:hover {
-  color: #fbc40d;
+.cerrarInicioSesion:hover { /* Efecto al pasar el ratón por encima */
+  color: #fbc40d; /* Color de texto */
 }
 
-#mensajeErrorSesion {
-  background-color: #f8d7da;
-  color: #721c24;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #f5c6cb;
-  border-radius: 5px;
-  font-size: 10px;
+#mensajeErrorSesion { /* Estilos del mensaje de error de inicio de sesión */
+  background-color: #f8d7da; /* Color de fondo */
+  color: #721c24; /* Color de texto */
+  padding: 10px; /* Padding */
+  margin-bottom: 10px; /* Margen inferior */
+  border: 1px solid #f5c6cb; /* Borde */
+  border-radius: 5px; /* Radio del borde */
+  font-size: 10px; /* Tamaño de la fuente */
 }
 
 /*==================== Footer ====================*/
 
-.footer {
-  background-color: #121212;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  padding: 10px 0 !important;
+.footer { /* Estilos del footer */
+  background-color: #121212 !important; /* Color de fondo */
+  color: white; /* Color de texto */
+  padding: 10px; /* Padding */
+  text-align: center; /* Alinear texto */
+  padding: 10px 0 !important; /* Padding */
 }
 
-.footer p {
-  margin-bottom: 5px;
+.footer p { /* Estilos del párrafo del footer */
+  margin-bottom: 5px; /* Margen inferior */
 }
 
-.footer a {
-  color: #fbc40d;
-  text-decoration: none;
+.footer a { /* Estilos del enlace del footer */
+  color: #fbc40d; /* Color de texto */
+  text-decoration: none; /* Decoración de texto */
 }
 
-.footer a:hover {
-  color: #bd140a;
+.footer a:hover { /* Efecto al pasar el ratón por encima */
+  color: #bd140a; /* Color de texto */
 }

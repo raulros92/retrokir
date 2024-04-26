@@ -1,7 +1,7 @@
 <?php
-// Incluir el controlador
-session_start();
-require_once('controlador/controlador.php');
+
+session_start(); // Iniciar una sesión
+require_once('controlador/controlador.php'); // Incluir el controlador
 
 // Verificar si se ha enviado un formulario de inicio de sesión
 if (isset($_POST['submit_login'])) {
@@ -43,19 +43,19 @@ if (isset($_GET['cerrarSesion'])) {
 
 <body>
 
-    <nav id="nav">
-        <div class="navLogo">
-            <div class="navObjeto" id="navLogoImg">
+    <nav id="nav"> <!-- Barra de navegación -->
+        <div class="navLogo"> <!-- Logo de RetroKir -->
+            <div class="navObjeto" id="navLogoImg"> <!-- Imagen del logo -->
                 <img src="assets/img/Metakirbi aleta.png" alt="logo-retrokir" class="logoRetrokir">
-                <a id="logoLink" href="index.php">
-                    <p id="logoTexto">RetroKir</p>
+                <a id="logoLink" href="index.php"> <!-- Enlace al inicio -->
+                    <p id="logoTexto">RetroKir</p> <!-- Texto del logo -->
                 </a>
             </div>
         </div>
-        <!-- Sección de contacto -->
+        <!-- Redes sociales y contacto -->
         <div class="Contactar">
             <a href="https://www.tiktok.com/@retrokir" target="_blank" class="tiktokIcon"><i class="fab fa-tiktok"></i></a>
-            <a href="#formulario" class="contactanos">¡Contacta con nosotros!</a>
+            <a href="#formulario" class="contactanos">¡Contacta con nosotros!</a> <!-- Enlace al formulario de contacto -->
         </div>
         <!-- Botones de navegación -->
         <div class="navBotones">
@@ -80,11 +80,11 @@ if (isset($_GET['cerrarSesion'])) {
     </nav>
 
     <?php
-    $menuItems = ['Mario Bros', 'Sonic', 'Solid Snake', 'Link', 'Kirby'];
+    $menuItems = ['Mario Bros', 'Sonic', 'Solid Snake', 'Link', 'Kirby']; // Elementos del menú inferior
     ?>
 
-    <nav class="navInferior">
-        <?php foreach ($menuItems as $item) : ?>
+    <nav class="navInferior"> <!-- Menú de navegación inferior -->
+        <?php foreach ($menuItems as $item) : ?> <!-- Mostrar los elementos del menú -->
             <h3 class="menuObjeto"><?= $item ?></h3>
         <?php endforeach; ?>
     </nav>
@@ -108,6 +108,7 @@ if (isset($_GET['cerrarSesion'])) {
         </form>
     </div>
 
+    <!-- Slider de productos -->
     <section class="slider">
         <div class="sliderContainer">
             <div class="sliderObject">
@@ -169,6 +170,7 @@ if (isset($_GET['cerrarSesion'])) {
         </div>
     </section>
 
+    <!-- Características de la tienda -->
     <section class="caracteristicas">
         <div class="caracteristica">
             <img src="assets/img/shipping.png" alt="Icono de Envio" class="caracteristicaIcono">
@@ -194,6 +196,7 @@ if (isset($_GET['cerrarSesion'])) {
         </div>
     </section>
 
+    <!-- Sección de productos -->
     <section class="producto" id="producto">
         <img src="assets/img/MarioBros.png" alt="Camiseta de Mario" class="productoImg">
 
@@ -206,11 +209,11 @@ if (isset($_GET['cerrarSesion'])) {
             <p class="productoDesc">Esta camiseta, hecha al 100% de algodón orgánico de alta calidad, ofrece comodidad
                 excepcional y ajuste regular. Certificada por estándares ecológicos y éticos, es la elección ideal para
                 los amantes de los videojuegos que tienen conciencia ecológica.</p>
-            <div class="colores">
+            <div class="colores"> <!-- Colores disponibles -->
                 <div class="color"></div>
                 <div class="color"></div>
             </div>
-            <div class="sizes">
+            <div class="sizes"> <!-- Tallas disponibles -->
                 <div class="size">S</div>
                 <div class="size">M</div>
                 <div class="size">L</div>
@@ -256,6 +259,7 @@ if (isset($_GET['cerrarSesion'])) {
     }
     ?>
 
+    <!-- Sección de contacto -->
     <section id="formulario" class="section">
         <div class="container">
             <h3 class="title">¡Contacta con nosotros!</h3>
@@ -287,6 +291,7 @@ if (isset($_GET['cerrarSesion'])) {
         </div>
     </section>
 
+    <!-- Pie de página -->
     <footer class="footer">
         <div class="content has-text-centered">
             <p>&copy; <?php echo date("Y"); ?> RetroKir. Todos los derechos reservados.</p>

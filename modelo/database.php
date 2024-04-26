@@ -1,51 +1,51 @@
 <!-- Conexion y funciones con la base de datos -->
 
 <?php
-require_once("datos_conexion.php");
+require_once("datos_conexion.php"); // Incluir el archivo de datos de conexión
 
 //FUNCIONES DE CONEXION//
 
 // Función para establecer la conexión a la base de datos
-function conectar()
+function conectar() 
 {
-    $conexion = mysqli_connect(HOST, USER, PASSWORD, DATABASE);
-    if (!$conexion) {
-        die("Error de conexión: " . mysqli_connect_error());
-    } else {
-        return $conexion;
+    $conexion = mysqli_connect(HOST, USER, PASSWORD, DATABASE); // Conectar a la base de datos
+    if (!$conexion) { // Si la conexión falla
+        die("Error de conexión: " . mysqli_connect_error()); // Mostrar mensaje de error
+    } else { // Si la conexión es exitosa
+        return $conexion; // Retornar la conexión
     }
 }
 
 // Función para cerrar la conexión a la base de datos
-function cerrarConexion($conexion)
+function cerrarConexion($conexion) 
 {
-    mysqli_close($conexion);
+    mysqli_close($conexion); // Cerrar la conexión
 }
 
 //FUNCIONES DE CONSULTA//
 
 // Función para ejecutar consultas SELECT
-function consultar($sql)
+function consultar($sql) 
 {
-    $conexion = conectar();
-    $resultado = mysqli_query($conexion, $sql);
-    if (!$resultado) {
-        die("Error al ejecutar la consulta: " . mysqli_error($conexion));
-    } else {
+    $conexion = conectar(); // Establecer la conexión
+    $resultado = mysqli_query($conexion, $sql); // Ejecutar la consulta
+    if (!$resultado) { // Si la consulta falla
+        die("Error al ejecutar la consulta: " . mysqli_error($conexion)); // Mostrar mensaje de error
+    } else { // Si la consulta es exitosa
         cerrarConexion($conexion); // Cerrar la conexión
-        return $resultado;
+        return $resultado; // Retornar el resultado
     }
 }
 
 // Función para ejecutar consultas INSERT, UPDATE, DELETE
-function ejecutar($sql)
+function ejecutar($sql) 
 {
-    $conexion = conectar();
-    if (mysqli_query($conexion, $sql)) {
+    $conexion = conectar(); // Establecer la conexión
+    if (mysqli_query($conexion, $sql)) { // Ejecutar la consulta
         // Consulta ejecutada con éxito
     } else {
         // La consulta falló
-        die("Error al ejecutar la consulta: " . mysqli_error($conexion));
+        die("Error al ejecutar la consulta: " . mysqli_error($conexion)); // Mostrar mensaje de error
     }
     cerrarConexion($conexion); // Cerrar la conexión
 }
@@ -53,31 +53,31 @@ function ejecutar($sql)
 //FUNCIONES DE GESTION DE PRODUCTOS//
 
 // Función para obtener un producto por su nombre y color
-function obtenerProductoPorNombreYColor($nombre, $color)
+function obtenerProductoPorNombreYColor($nombre, $color) 
 {
-    $sql = "SELECT * FROM producto WHERE nombre = '$nombre' AND color = '$color'";
-    $resultado = consultar($sql);
-    return mysqli_fetch_assoc($resultado);
+    $sql = "SELECT * FROM producto WHERE nombre = '$nombre' AND color = '$color'"; // Consulta SQL
+    $resultado = consultar($sql); // Ejecutar la consulta
+    return mysqli_fetch_assoc($resultado); // Retornar el resultado
 }
 
 // Función para actualizar la cantidad de un producto
 function actualizarCantidadProducto($id, $nuevaCantidad)
 {
-    $sql = "UPDATE producto SET cantidad = $nuevaCantidad WHERE id_producto = $id";
-    ejecutar($sql);
-}
+    $sql = "UPDATE producto SET cantidad = $nuevaCantidad WHERE id_producto = $id"; // Consulta SQL
+    ejecutar($sql); // Ejecutar la consulta
+} 
 
 // Función para crear un nuevo producto
-function crearProducto($nombre, $precio, $cantidad, $color)
+function crearProducto($nombre, $precio, $cantidad, $color) 
 {
-    $sql = "INSERT INTO producto (nombre, precio, cantidad, color) VALUES ('$nombre', $precio, $cantidad, '$color')";
-    ejecutar($sql);
+    $sql = "INSERT INTO producto (nombre, precio, cantidad, color) VALUES ('$nombre', $precio, $cantidad, '$color')"; // Consulta SQL
+    ejecutar($sql); // Ejecutar la consulta
 }
 
 // Función para actualizar un producto
 function actualizarProducto($id, $nombre, $precio, $cantidad, $color)
 {
-    $sql = "UPDATE producto SET nombre = '$nombre', precio = $precio, cantidad = $cantidad, color = '$color' WHERE id_producto = $id";
+    $sql = "UPDATE producto SET nombre = '$nombre', precio = $precio, cantidad = $cantidad, color = '$color' WHERE id_producto = $id"; 
     ejecutar($sql);
 }
 
@@ -126,19 +126,19 @@ function correoRegistrado($email)
 {
     $sql = "SELECT * FROM usuario WHERE email='$email'";
     $resultado = consultar($sql);
-    return mysqli_num_rows($resultado) > 0;
+    return mysqli_num_rows($resultado) > 0; // Si el correo está registrado, retornar true
 }
 
 // Función para verificar las credenciales del usuario al iniciar sesión
 function verificarCredencialesInicioSesion($email, $contrasena)
 {
-    $sql = "SELECT id_usuario, contrasena FROM usuario WHERE email='$email'";
+    $sql = "SELECT id_usuario, contrasena FROM usuario WHERE email='$email'"; 
     $resultado = consultar($sql);
-    if (mysqli_num_rows($resultado) == 1) {
-        $fila = mysqli_fetch_assoc($resultado);
-        return password_verify($contrasena, $fila['contrasena']) ? $fila['id_usuario'] : null;
+    if (mysqli_num_rows($resultado) == 1) { // Si se encontró un usuario con el correo electrónico
+        $fila = mysqli_fetch_assoc($resultado); // Obtener la fila del resultado
+        return password_verify($contrasena, $fila['contrasena']) ? $fila['id_usuario'] : null; // Verificar la contraseña
     }
-    return null;
+    return null; // Si no se encontró un usuario con el correo electrónico
 }
 
 // Función para obtener el ID del usuario por su correo electrónico
@@ -146,16 +146,16 @@ function obtenerIdUsuarioPorEmail($email)
 {
     $sql = "SELECT id_usuario FROM usuario WHERE email = '$email'";
     $resultado = consultar($sql);
-    $fila = mysqli_fetch_assoc($resultado);
-    return $fila['id_usuario'];
+    $fila = mysqli_fetch_assoc($resultado); // Obtener la fila del resultado
+    return $fila['id_usuario'];  // Retornar el ID del usuario
 }
 
 // Función para insertar un nuevo usuario en la base de datos
 function insertarUsuario($nombre, $email, $contrasena)
 {
-    $contrasena_hash = password_hash($contrasena, PASSWORD_DEFAULT);
-    $sql = "INSERT INTO usuario (nombre, email, contrasena) VALUES ('$nombre', '$email', '$contrasena_hash')";
-    ejecutar($sql);
+    $contrasena_hash = password_hash($contrasena, PASSWORD_DEFAULT); // Encriptar la contraseña
+    $sql = "INSERT INTO usuario (nombre, email, contrasena) VALUES ('$nombre', '$email', '$contrasena_hash')"; // Consulta SQL
+    ejecutar($sql); // Ejecutar la consulta
 }
 
 ?>
