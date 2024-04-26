@@ -2,6 +2,27 @@
 // Incluir el controlador
 require_once('../controlador/controlador.php');
 
+// Definir los productos a actualizar
+$productosReducir = [
+    ['nombre' => 'Mario Bros', 'color' => 'Gris'],
+    ['nombre' => 'Sonic Sega', 'color' => 'Blanco']
+];
+
+// Crear pedido y procesar la actualización de la cantidad de productos al hacer clic en el botón realizarPago
+
+if (isset($_GET["compra_con_exito"])) {
+    $fecha_pedido = date("Y-m-d");
+    $estado_pedido = "pendiente";
+    // Insertar el pedido en la base de datos
+    crearPedido($fecha_pedido, $estado_pedido);
+    foreach ($productosReducir as $producto) {
+        $productoDB = obtenerProductoPorNombreYColor($producto['nombre'], $producto['color']);
+        if ($productoDB && $productoDB['cantidad'] > 0) {
+            actualizarCantidadProducto($productoDB['id_producto'], $productoDB['cantidad'] - 1);
+        }
+    }
+};
+
 ?>
 
 <!DOCTYPE html>
@@ -91,7 +112,7 @@ require_once('../controlador/controlador.php');
                     <input type="text" placeholder="año" class="pagoInput sm">
                     <input type="text" placeholder="cvv" class="pagoInput sm">
                 </div>
-                <button class="botonComprar">¡COMPRAR AHORA!</button>
+                <button class="botonComprar" name="realizarPago">¡COMPRAR AHORA!</button>
                 <i class="cerrarPago fa-solid fa-xmark"></i>
             </div>
         </section>
@@ -109,9 +130,7 @@ require_once('../controlador/controlador.php');
 
     </main>
 
-    <!-- Importar productos.js -->
-    <script src="../assets/js/productos.js"></script>
-    <!-- Importar main.js -->
+    <!-- Importar cesta.js -->
     <script src="../assets/js/cesta.js"></script>
 
 </body>

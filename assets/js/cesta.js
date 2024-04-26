@@ -53,3 +53,7 @@ botonComprar.addEventListener("click", function () {
     compraExito.style.display = "flex";
 });
 
+botonComprar.addEventListener("click", function () {
+    window.location.href = 'cesta.php?compra_con_exito=true';
+});
+

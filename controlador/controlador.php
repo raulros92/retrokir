@@ -1,8 +1,8 @@
 <!-- Controlador -->
 
 <?php
-session_start();
-require_once(__DIR__ . '/../modelo/database.php');
+
+require_once('../modelo/database.php');
 
 // Función para registrar un nuevo usuario
 function registrarUsuario($nombre, $email, $contrasena)
@@ -42,6 +42,9 @@ function cerrarSesion()
     exit();
 }
 
+//GESTION DEL CARRITO//
+
+
 // Función para agregar un producto al carrito
 function agregarAlCarrito($id_producto)
 {
@@ -70,25 +73,6 @@ function eliminarDelCarrito($id_producto)
 function vaciarCarrito()
 {
     unset($_SESSION['carrito']);
-}
-
-// Función para finalizar la compra y generar un pedido
-function finalizarCompra()
-{
-    if (isset($_SESSION['carrito']) && isset($_SESSION['id_usuario'])) {
-        $id_usuario = $_SESSION['id_usuario'];
-        $fecha_pedido = date('Y-m-d');
-        $estado_pedido = "pendiente";
-
-        // Crear un nuevo pedido
-        crearPedido($fecha_pedido, $estado_pedido, $id_usuario);
-
-        // Vaciar el carrito después de completar la compra
-        vaciarCarrito();
-
-        return true;
-    }
-    return false;
 }
 
 ?>

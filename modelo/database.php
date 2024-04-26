@@ -52,19 +52,26 @@ function ejecutar($sql)
 
 //FUNCIONES DE GESTION DE PRODUCTOS//
 
+// Función para obtener un producto por su nombre y color
+function obtenerProductoPorNombreYColor($nombre, $color)
+{
+    $sql = "SELECT * FROM producto WHERE nombre = '$nombre' AND color = '$color'";
+    $resultado = consultar($sql);
+    return mysqli_fetch_assoc($resultado);
+}
+
+// Función para actualizar la cantidad de un producto
+function actualizarCantidadProducto($id, $nuevaCantidad)
+{
+    $sql = "UPDATE producto SET cantidad = $nuevaCantidad WHERE id_producto = $id";
+    ejecutar($sql);
+}
+
 // Función para crear un nuevo producto
 function crearProducto($nombre, $precio, $cantidad, $color)
 {
     $sql = "INSERT INTO producto (nombre, precio, cantidad, color) VALUES ('$nombre', $precio, $cantidad, '$color')";
     ejecutar($sql);
-}
-
-// Función para obtener un producto por su ID
-function obtenerProductoPorId($id)
-{
-    $sql = "SELECT * FROM producto WHERE id_producto = $id";
-    $resultado = consultar($sql);
-    return mysqli_fetch_assoc($resultado);
 }
 
 // Función para actualizar un producto
@@ -84,9 +91,9 @@ function eliminarProducto($id)
 //GESTION DE PEDIDOS//
 
 // Función para crear un nuevo pedido
-function crearPedido($fechaPedido, $estadoPedido, $idUsuario)
+function crearPedido($fechaPedido, $estadoPedido)
 {
-    $sql = "INSERT INTO pedido (fecha_pedido, estado_pedido, id_usuario) VALUES ('$fechaPedido', '$estadoPedido', '$idUsuario')";
+    $sql = "INSERT INTO pedido (fecha_pedido, estado_pedido) VALUES ('$fechaPedido', '$estadoPedido')";
     ejecutar($sql);
 }
 
@@ -114,29 +121,12 @@ function eliminarPedido($id)
 
 //GESTION DE USUARIOS//
 
-// Función para obtener el ID del usuario por su correo electrónico
-function obtenerIdUsuarioPorEmail($email)
-{
-    $sql = "SELECT id_usuario FROM usuario WHERE email = '$email'";
-    $resultado = consultar($sql);
-    $fila = mysqli_fetch_assoc($resultado);
-    return $fila['id_usuario'];
-}
-
 // Función para verificar si un correo electrónico ya está registrado
 function correoRegistrado($email)
 {
     $sql = "SELECT * FROM usuario WHERE email='$email'";
     $resultado = consultar($sql);
     return mysqli_num_rows($resultado) > 0;
-}
-
-// Función para insertar un nuevo usuario en la base de datos
-function insertarUsuario($nombre, $email, $contrasena)
-{
-    $contrasena_hash = password_hash($contrasena, PASSWORD_DEFAULT);
-    $sql = "INSERT INTO usuario (nombre, email, contrasena) VALUES ('$nombre', '$email', '$contrasena_hash')";
-    ejecutar($sql);
 }
 
 // Función para verificar las credenciales del usuario al iniciar sesión
@@ -149,6 +139,23 @@ function verificarCredencialesInicioSesion($email, $contrasena)
         return password_verify($contrasena, $fila['contrasena']) ? $fila['id_usuario'] : null;
     }
     return null;
+}
+
+// Función para obtener el ID del usuario por su correo electrónico
+function obtenerIdUsuarioPorEmail($email)
+{
+    $sql = "SELECT id_usuario FROM usuario WHERE email = '$email'";
+    $resultado = consultar($sql);
+    $fila = mysqli_fetch_assoc($resultado);
+    return $fila['id_usuario'];
+}
+
+// Función para insertar un nuevo usuario en la base de datos
+function insertarUsuario($nombre, $email, $contrasena)
+{
+    $contrasena_hash = password_hash($contrasena, PASSWORD_DEFAULT);
+    $sql = "INSERT INTO usuario (nombre, email, contrasena) VALUES ('$nombre', '$email', '$contrasena_hash')";
+    ejecutar($sql);
 }
 
 ?>
