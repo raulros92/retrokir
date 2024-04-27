@@ -238,7 +238,7 @@ if (isset($_GET['cerrarSesion'])) {
                     <h1>¡Misión completada con éxito!</h1>
                 </div>
                 <button class="bottonContinuarComprando" id="botonContinuarComprando">Continuar Comprando</button>
-                <a href="/vista/cesta.php" class="botonRealizarPago" id="realizarPago">Realizar pedido</a>
+                <a href="vista/cesta.php" class="botonRealizarPago" id="realizarPago">Realizar pedido</a>
             </div>
         </div>
     <?php
